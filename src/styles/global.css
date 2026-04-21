@@ -85,6 +85,17 @@ input {
 }
 table {
 	width: 100%;
+	border-collapse: collapse;
+}
+th,
+td {
+	border: 1px solid rgb(var(--gray));
+	padding: 0.5em 0.75em;
+	text-align: left;
+}
+th {
+	background-color: rgb(var(--gray-light));
+	font-weight: bold;
 }
 img {
 	max-width: 100%;
