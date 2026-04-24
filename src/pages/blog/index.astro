@@ -35,7 +35,7 @@ const posts = (await getCollection('blog'))
 									height={240}
 									src={post.data.heroImage}
 									alt=""
-									class="card-img"
+									style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0;"
 								/>
 							</div>
 						)}
@@ -106,28 +106,13 @@ const posts = (await getCollection('blog'))
 		text-decoration: none;
 	}
 
+	/* position:relative で absolute充填する画像コンテナ */
 	.card-img-wrap {
+		position: relative;
 		overflow: hidden;
 		height: 160px;
 		flex-shrink: 0;
 		border-radius: 12px 12px 0 0;
-	}
-
-	/* Astro <Image> が生成する picture・img を確実に制御 */
-	.card-img-wrap :global(picture) {
-		display: block;
-		width: 100%;
-		height: 160px;
-	}
-
-	.card-img-wrap :global(img),
-	.card-img {
-		display: block;
-		width: 100%;
-		height: 160px;
-		object-fit: cover;
-		object-position: center;
-		border-radius: 0;
 	}
 
 	.card-body {

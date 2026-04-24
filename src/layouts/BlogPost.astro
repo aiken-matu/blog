@@ -18,13 +18,24 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	<body>
 		<Header />
+
+		<!-- hero画像はmainの外に出して独立制御 -->
+		{heroImage && (
+			<div class="hero-wrapper">
+				<div class="hero-image">
+					<Image
+						width={960}
+						height={480}
+						src={heroImage}
+						alt=""
+						style="display:block; width:100%; height:auto; border-radius:0; box-shadow:none;"
+					/>
+				</div>
+			</div>
+		)}
+
 		<main>
 			<article>
-				{heroImage && (
-					<div class="hero-image">
-						<Image width={960} height={480} src={heroImage} alt="" />
-					</div>
-				)}
 				<div class="prose">
 					<div class="article-header">
 						<div class="date-row">
@@ -46,46 +57,37 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 </html>
 
 <style>
-	main {
-		width: 760px;
-		max-width: calc(100% - 2em);
-		margin: 0 auto;
-		padding: 2.5em 1em;
+	/* ヒーロー画像ラッパー（mainの外） */
+	.hero-wrapper {
+		width: 100%;
+		background-color: var(--body-bg);
+		padding: 1.5em 1em 0;
 	}
 
 	.hero-image {
-		width: 100%;
 		max-width: 760px;
 		margin: 0 auto;
-		overflow: hidden;
 		border-radius: 14px;
+		overflow: hidden;
 		box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
 		line-height: 0;
 	}
 
-	/* Astro <Image> が生成する picture・img を確実に制御 */
-	.hero-image :global(picture) {
-		display: block;
-		width: 100%;
-		line-height: 0;
-	}
-
-	.hero-image :global(img) {
-		display: block;
-		width: 100%;
-		height: auto;
-		border-radius: 0;
-		box-shadow: none;
+	/* 記事本文エリア */
+	main {
+		width: 760px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 2em 1em 3em;
 	}
 
 	.prose {
 		width: 100%;
-		margin: 0 auto;
 		color: rgb(var(--gray-dark));
 	}
 
 	.article-header {
-		padding: 2em 0 0;
+		padding: 0;
 		margin-bottom: 0;
 	}
 
@@ -157,16 +159,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	}
 
 	@media (max-width: 720px) {
+		.hero-wrapper {
+			padding: 1em 0.5em 0;
+		}
+
+		.hero-image {
+			border-radius: 10px;
+		}
+
 		main {
-			padding: 1.5em 1em;
+			padding: 1.5em 1em 2em;
 		}
 
 		.article-header h1 {
 			font-size: 1.45em;
-		}
-
-		.hero-image img {
-			border-radius: 10px;
 		}
 	}
 </style>
