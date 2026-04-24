@@ -139,8 +139,15 @@ tr:hover td {
 	background-color: var(--accent-light);
 }
 
-/* 画像 */
+/* 画像・pictureタグ */
+picture {
+	display: block;
+	width: 100%;
+	line-height: 0;
+}
+
 img {
+	display: block;
 	max-width: 100%;
 	height: auto;
 	border-radius: 10px;
