@@ -2,7 +2,7 @@
 title: '証券口座の開き方【SBI・楽天比較】'
 description: '迷わず選んで、すぐに始めるために。実際に両方使っている公務員投資家が、SBI証券と楽天証券をリアルに比較します。'
 pubDate: '2026-04-21'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: '../../assets/how-to-open-brokerage-account-sbi-rakuten.png'
 ---
 
 *— 迷わず選んで、すぐに始めるために —*

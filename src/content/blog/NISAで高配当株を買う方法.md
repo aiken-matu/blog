@@ -2,7 +2,7 @@
 title: 'NISAで高配当株を買う方法'
 description: '資産も増やす。でも「使えるお金」も増やす。インデックス投資だけでは埋まらなかった違和感を、新NISAの高配当株投資が解決してくれた話。'
 pubDate: '2026-04-22'
-heroImage: '../../assets/blog-placeholder-5.jpg'
+heroImage: '../../assets/how-to-buy-high-dividend-stocks-with-nisa.png'
 ---
 
 *— 資産も増やす。でも「使えるお金」も増やす —*
