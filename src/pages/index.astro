@@ -1,49 +1,253 @@
 ---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const posts = (await getCollection('blog'))
+	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 6);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- ヒーローセクション -->
+			<section class="hero">
+				<div class="hero-content">
+					<h1 class="hero-title">配当日和</h1>
+					<p class="hero-sub">お金も私も働く、公務員の小さな自由計画</p>
+					<p class="hero-desc">
+						40代公務員が、高配当株・インデックス投資・iDeCoを組み合わせながら<br>
+						「配当金で生活費を賄える日」を目指して歩む記録です。
+					</p>
+					<a href="/blog" class="hero-btn">記事を読む →</a>
+				</div>
+			</section>
+
+			<!-- 最新記事 -->
+			<section class="latest">
+				<h2 class="section-title">最新の記事</h2>
+				<div class="card-grid">
+					{posts.map((post) => (
+						<a href={`/blog/${post.id}/`} class="card">
+							{post.data.heroImage && (
+								<div class="card-img-wrap">
+									<Image
+										width={480}
+										height={240}
+										src={post.data.heroImage}
+										alt=""
+										class="card-img"
+									/>
+								</div>
+							)}
+							<div class="card-body">
+								<p class="card-date">
+									<FormattedDate date={post.data.pubDate} />
+								</p>
+								<h3 class="card-title">{post.data.title}</h3>
+								{post.data.description && (
+									<p class="card-desc">{post.data.description}</p>
+								)}
+							</div>
+						</a>
+					))}
+				</div>
+				<div class="see-all">
+					<a href="/blog" class="see-all-btn">すべての記事を見る →</a>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	/* ヒーロー */
+	.hero {
+		background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+		border-radius: 16px;
+		padding: 3em 2.5em;
+		margin-bottom: 3em;
+		text-align: center;
+	}
+
+	.hero-title {
+		font-size: 2.8em;
+		color: #1D4ED8;
+		margin: 0 0 0.2em 0;
+		letter-spacing: 0.05em;
+		border-bottom: none;
+	}
+
+	.hero-sub {
+		font-size: 0.95em;
+		color: #3B82F6;
+		margin: 0 0 1em 0;
+		font-weight: 500;
+	}
+
+	.hero-desc {
+		font-size: 0.95em;
+		color: #475569;
+		margin: 0 0 1.8em 0;
+		line-height: 1.9;
+	}
+
+	.hero-btn {
+		display: inline-block;
+		background-color: #2563EB;
+		color: #FFFFFF;
+		padding: 0.7em 1.8em;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 0.95em;
+		text-decoration: none;
+		transition: background-color 0.2s;
+	}
+
+	.hero-btn:hover {
+		background-color: #1D4ED8;
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	/* セクションタイトル */
+	.section-title {
+		font-size: 1.3em;
+		color: #1E293B;
+		margin: 0 0 1.5em 0;
+		padding-bottom: 0.5em;
+		border-bottom: 2px solid #DBEAFE;
+	}
+
+	/* カードグリッド */
+	.card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.4em;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		background: #FFFFFF;
+		border-radius: 12px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(37, 99, 235, 0.07);
+		text-decoration: none;
+		color: inherit;
+		overflow: hidden;
+		transition: box-shadow 0.2s, transform 0.2s;
+	}
+
+	.card:hover {
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10), 0 8px 24px rgba(37, 99, 235, 0.12);
+		transform: translateY(-3px);
+		text-decoration: none;
+	}
+
+	.card-img-wrap {
+		overflow: hidden;
+		height: 160px;
+	}
+
+	.card-img {
+		width: 100%;
+		height: 160px;
+		object-fit: cover;
+		border-radius: 0;
+		display: block;
+	}
+
+	.card-body {
+		padding: 1.1em 1.2em 1.3em;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4em;
+	}
+
+	.card-date {
+		font-size: 0.78em;
+		color: #94A3B8;
+		margin: 0;
+	}
+
+	.card-title {
+		font-size: 0.95em;
+		font-weight: 700;
+		color: #1E293B;
+		margin: 0;
+		line-height: 1.5;
+		border-bottom: none;
+	}
+
+	.card:hover .card-title {
+		color: #2563EB;
+	}
+
+	.card-desc {
+		font-size: 0.8em;
+		color: #64748B;
+		margin: 0;
+		line-height: 1.6;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	/* もっと見る */
+	.see-all {
+		text-align: center;
+		margin-top: 2em;
+	}
+
+	.see-all-btn {
+		display: inline-block;
+		border: 2px solid #2563EB;
+		color: #2563EB;
+		padding: 0.65em 2em;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.92em;
+		text-decoration: none;
+		transition: background-color 0.2s, color 0.2s;
+	}
+
+	.see-all-btn:hover {
+		background-color: #2563EB;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+
+	@media (max-width: 800px) {
+		.card-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 540px) {
+		.hero {
+			padding: 2em 1.2em;
+		}
+
+		.hero-title {
+			font-size: 2em;
+		}
+
+		.card-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
