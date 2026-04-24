@@ -2,7 +2,7 @@
 title: 'iDeCoを始めた話——老後に開けるお楽しみボックス'
 description: '2018年にiDeCoをスタートした話。節税効果・少額での始めやすさ・老後資金としての位置づけを、正直な体験談とともに書きました。'
 pubDate: '2026-04-22'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/how-to-buy-high-dividend-stocks-with-nisa.png'
 ---
 
 *— 今は使えないからこそ、未来に残る —*
