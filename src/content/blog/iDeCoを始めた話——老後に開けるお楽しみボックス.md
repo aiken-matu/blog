@@ -1,6 +1,7 @@
 ---
 title: 'iDeCoを始めた話——老後に開けるお楽しみボックス'
 description: '2018年にiDeCoをスタートした話。節税効果・少額での始めやすさ・老後資金としての位置づけを、正直な体験談とともに書きました。'
+heroImage: '../../assets/ideco-started.png'
 pubDate: '2026-04-22'
 ---
 
