@@ -105,7 +105,7 @@ heroImage: '../../assets/rakuten-card-diamond.png'
 
 ---
 
-<!-- 楽天アフィリエイトリンクここに挿入 -->
+<a href="https://hb.afl.rakuten.co.jp/hsc/5329f954.5cf286bc.5329f607.bc12a33f/?link_type=text&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJ0ZXh0IiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDEzLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">クレジットカード選ぶなら楽天カード！</a>
 
 ---
 
