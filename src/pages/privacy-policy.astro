@@ -1,0 +1,163 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead
+			title="プライバシーポリシー | 配当日和"
+			description="配当日和のプライバシーポリシー。個人情報の取り扱い、アフィリエイト、Googleアナリティクス、免責事項について説明します。"
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="prose">
+				<h1>プライバシーポリシー</h1>
+				<p class="updated">掲載日：2026年4月25日</p>
+
+				<h2>1. 個人情報の取り扱いについて</h2>
+				<p>
+					当サイト「配当日和」では、お問い合わせフォーム等を通じて個人情報を収集することはありません。
+				</p>
+
+				<h2>2. アフィリエイトについて</h2>
+				<p>
+					当サイトは、A8.net、バリューコマース等のアフィリエイトプログラムに参加しています。
+					記事内に掲載している商品・サービスへの紹介リンクを経由して購入・申込みが行われた場合、
+					当サイト運営者が報酬を受け取ることがあります。
+				</p>
+				<p>
+					なお、紹介している商品・サービスは運営者が実際に使用・検討したものを中心としており、
+					報酬の有無にかかわらず、読者にとって有益と判断した情報のみ掲載しています。
+				</p>
+
+				<h2>3. Googleアナリティクスについて</h2>
+				<p>
+					当サイトは、Googleが提供するアクセス解析ツール「Googleアナリティクス」を使用しています。
+					Googleアナリティクスは、Cookieを使用してアクセス情報を収集します。
+					収集される情報は匿名であり、個人を特定するものではありません。
+				</p>
+				<p>
+					Googleアナリティクスのデータ収集・処理の仕組みについては、
+					<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer">
+						Googleのプライバシーポリシー
+					</a>
+					をご確認ください。
+					Cookieを無効にすることで、データ収集を拒否することができます。
+				</p>
+
+				<h2>4. 免責事項</h2>
+				<p>
+					当サイトに掲載している情報は、投資判断の参考情報として提供するものです。
+					特定の金融商品・サービスへの投資を勧誘・推奨するものではありません。
+				</p>
+				<p>
+					投資にはリスクが伴います。実際の投資判断はご自身の責任において行ってください。
+					当サイトの情報に基づいて被った損害について、運営者は一切の責任を負いません。
+				</p>
+				<p>
+					また、当サイトに掲載している情報の正確性・完全性については万全を期しておりますが、
+					その内容を保証するものではありません。情報は予告なく変更・削除されることがあります。
+				</p>
+
+				<h2>5. お問い合わせ</h2>
+				<table>
+					<tbody>
+						<tr>
+							<th>サイト名</th>
+							<td>配当日和</td>
+						</tr>
+						<tr>
+							<th>運営者</th>
+							<td>配当日和 管理人</td>
+						</tr>
+						<tr>
+							<th>メール</th>
+							<td>（後日追加予定）</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 760px;
+		padding: 2.5em 1.5em 4em;
+		margin: 0 auto;
+	}
+
+	.prose h1 {
+		font-size: 1.8em;
+		font-weight: 800;
+		color: #1E293B;
+		margin-bottom: 0.2em;
+	}
+
+	.updated {
+		font-size: 0.85em;
+		color: #94A3B8;
+		margin-top: 0;
+		margin-bottom: 2.5em;
+	}
+
+	.prose h2 {
+		font-size: 1.15em;
+		font-weight: 700;
+		color: #1E293B;
+		margin-top: 2.2em;
+		margin-bottom: 0.6em;
+		padding-bottom: 0.4em;
+		border-bottom: 2px solid #DBEAFE;
+	}
+
+	.prose p {
+		font-size: 0.95em;
+		line-height: 1.85;
+		color: #334155;
+		margin-bottom: 1em;
+	}
+
+	.prose a {
+		color: #2563EB;
+		text-decoration: underline;
+	}
+
+	.prose a:hover {
+		color: #1D4ED8;
+	}
+
+	.prose table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.93em;
+		margin-top: 0.5em;
+	}
+
+	.prose th,
+	.prose td {
+		padding: 0.75em 1em;
+		border: 1px solid #E2E8F0;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.prose th {
+		background-color: #F8FAFC;
+		color: #475569;
+		font-weight: 600;
+		width: 30%;
+		white-space: nowrap;
+	}
+
+	.prose td {
+		color: #334155;
+	}
+</style>
