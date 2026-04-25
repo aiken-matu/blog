@@ -23,6 +23,7 @@ const posts = (await getCollection('blog'))
 		<main>
 			<!-- ヒーローセクション -->
 			<section class="hero">
+				<div class="hero-accent-line"></div>
 				<div class="hero-content">
 					<h1 class="hero-title">配当日和</h1>
 					<p class="hero-sub">お金も私も働く、公務員の小さな自由計画</p>
@@ -32,6 +33,7 @@ const posts = (await getCollection('blog'))
 					</p>
 					<a href="/blog" class="hero-btn">記事を読む →</a>
 				</div>
+				<div class="hero-deco" aria-hidden="true"></div>
 			</section>
 
 			<!-- 最新記事 -->
@@ -75,11 +77,45 @@ const posts = (await getCollection('blog'))
 <style>
 	/* ヒーロー */
 	.hero {
-		background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+		background:
+			radial-gradient(ellipse at 88% 95%, rgba(167, 243, 208, 0.42) 0%, transparent 52%),
+			radial-gradient(ellipse at 12% 10%, rgba(219, 234, 254, 0.55) 0%, transparent 45%),
+			linear-gradient(118deg, #EFF6FF 0%, #F4FFFE 52%, #ECFDF5 100%);
 		border-radius: 16px;
-		padding: 3em 2.5em;
+		border-top: 4px solid #34D399;
+		padding: 3em 2.5em 3em;
 		margin-bottom: 3em;
 		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	/* 左上の細いグリーンライン装飾 */
+	.hero-accent-line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 4px;
+		height: 100%;
+		background: linear-gradient(180deg, #34D399 0%, #6EE7B7 60%, transparent 100%);
+		border-radius: 0 0 0 16px;
+	}
+
+	/* 右下の装飾円 */
+	.hero-deco {
+		position: absolute;
+		bottom: -48px;
+		right: -48px;
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		background: radial-gradient(circle, rgba(110, 231, 183, 0.22) 0%, transparent 70%);
+		pointer-events: none;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
 	}
 
 	.hero-title {
@@ -92,9 +128,9 @@ const posts = (await getCollection('blog'))
 
 	.hero-sub {
 		font-size: 0.95em;
-		color: #3B82F6;
+		color: #0D9488;
 		margin: 0 0 1em 0;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.hero-desc {
@@ -106,18 +142,20 @@ const posts = (await getCollection('blog'))
 
 	.hero-btn {
 		display: inline-block;
-		background-color: #2563EB;
+		background: linear-gradient(135deg, #059669 0%, #0D9488 100%);
 		color: #FFFFFF;
 		padding: 0.7em 1.8em;
 		border-radius: 8px;
 		font-weight: 700;
 		font-size: 0.95em;
 		text-decoration: none;
-		transition: background-color 0.2s;
+		transition: opacity 0.2s, box-shadow 0.2s;
+		box-shadow: 0 2px 10px rgba(5, 150, 105, 0.25);
 	}
 
 	.hero-btn:hover {
-		background-color: #1D4ED8;
+		opacity: 0.88;
+		box-shadow: 0 4px 16px rgba(5, 150, 105, 0.35);
 		text-decoration: none;
 		color: #FFFFFF;
 	}
@@ -128,7 +166,7 @@ const posts = (await getCollection('blog'))
 		color: #1E293B;
 		margin: 0 0 1.5em 0;
 		padding-bottom: 0.5em;
-		border-bottom: 2px solid #DBEAFE;
+		border-bottom: 2px solid #A7F3D0;
 	}
 
 	/* カードグリッド */
