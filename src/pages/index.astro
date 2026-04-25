@@ -78,11 +78,10 @@ const posts = (await getCollection('blog'))
 	/* ヒーロー */
 	.hero {
 		background:
-			radial-gradient(ellipse at 88% 95%, rgba(167, 243, 208, 0.42) 0%, transparent 52%),
-			radial-gradient(ellipse at 12% 10%, rgba(219, 234, 254, 0.55) 0%, transparent 45%),
-			linear-gradient(118deg, #EFF6FF 0%, #F4FFFE 52%, #ECFDF5 100%);
+			radial-gradient(ellipse at 92% 100%, rgba(167, 243, 208, 0.30) 0%, transparent 48%),
+			linear-gradient(130deg, #F8FBFF 0%, #FAFFFE 55%, #F5FFFA 100%);
 		border-radius: 16px;
-		border-top: 4px solid #34D399;
+		border-top: 3px solid #93C5FD;
 		padding: 3em 2.5em 3em;
 		margin-bottom: 3em;
 		text-align: center;
@@ -90,26 +89,26 @@ const posts = (await getCollection('blog'))
 		overflow: hidden;
 	}
 
-	/* 左上の細いグリーンライン装飾 */
+	/* 左側の細いブルーアクセントライン */
 	.hero-accent-line {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 4px;
 		height: 100%;
-		background: linear-gradient(180deg, #34D399 0%, #6EE7B7 60%, transparent 100%);
-		border-radius: 0 0 0 16px;
+		background: linear-gradient(180deg, #93C5FD 0%, #BFDBFE 70%, transparent 100%);
+		border-radius: 16px 0 0 16px;
 	}
 
-	/* 右下の装飾円 */
+	/* 右下のふわっとした薄いグリーン装飾 */
 	.hero-deco {
 		position: absolute;
-		bottom: -48px;
-		right: -48px;
-		width: 160px;
-		height: 160px;
+		bottom: -60px;
+		right: -60px;
+		width: 220px;
+		height: 220px;
 		border-radius: 50%;
-		background: radial-gradient(circle, rgba(110, 231, 183, 0.22) 0%, transparent 70%);
+		background: radial-gradient(circle, rgba(110, 231, 183, 0.20) 0%, rgba(167, 243, 208, 0.08) 50%, transparent 70%);
 		pointer-events: none;
 	}
 
@@ -128,9 +127,9 @@ const posts = (await getCollection('blog'))
 
 	.hero-sub {
 		font-size: 0.95em;
-		color: #0D9488;
+		color: #3B82F6;
 		margin: 0 0 1em 0;
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.hero-desc {
