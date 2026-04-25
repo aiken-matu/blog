@@ -63,6 +63,8 @@ heroImage: '../../assets/investment-fund-creation.png'
 
 **削減額：月約3万5,000円**
 
+保険解約の具体的な手順と、担当者の引き止めへの対処法はこちら → [貯蓄型保険を解約した話——担当者に言われた3つの呪縛を乗り越えるまで](/blog/insurance-review-guide/)
+
 ---
 
 ## ③ 通信費の見直しで月16,000円が浮いた
