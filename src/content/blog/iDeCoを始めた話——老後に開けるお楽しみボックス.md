@@ -1,6 +1,7 @@
 ---
 title: 'iDeCoを始めた話——老後に開けるお楽しみボックス'
 description: '2018年にiDeCoをスタートした話。節税効果・少額での始めやすさ・老後資金としての位置づけを、正直な体験談とともに書きました。'
+slug: how-i-started-ideco
 heroImage: '../../assets/ideco-started.png'
 pubDate: '2026-04-22'
 ---
@@ -154,4 +155,4 @@ iDeCoに興味はあるけれど、まだ始めていないという方もいら
 
 将来の自分のために、小さな一歩を踏み出してみてはいかがでしょうか。
 
-iDeCoとNISAどちらを先にやるべきか → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/idecoとnisaどちらを先にやるべきか公務員の正解/)
+iDeCoとNISAどちらを先にやるべきか → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa-for-civil-servants/)

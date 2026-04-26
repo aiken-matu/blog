@@ -2,6 +2,7 @@
 title: '証券口座の開き方【SBI・楽天比較】'
 description: '迷わず選んで、すぐに始めるために。実際に両方使っている公務員投資家が、SBI証券と楽天証券をリアルに比較します。'
 pubDate: '2026-04-21'
+slug: how-to-open-brokerage-account-sbi-rakuten
 heroImage: '../../assets/how-to-open-brokerage-account-sbi-rakuten.png'
 ---
 
@@ -114,4 +115,4 @@ SBI証券の「S株」は、国内上場株式のほぼすべてに対応して�
 
 次の記事では、その具体的な始め方について丁寧に解説していきます。
 
-公務員の給料と投資の組み合わせ方はこちら → [公務員の給料と投資の組み合わせ方——仕組み化でほったらかし](/blog/公務員の給料と投資の組み合わせ方仕組み化でほったらかし/)
+公務員の給料と投資の組み合わせ方はこちら → [公務員の給料と投資の組み合わせ方——仕組み化でほったらかし](/blog/civil-servant-salary-investing/)

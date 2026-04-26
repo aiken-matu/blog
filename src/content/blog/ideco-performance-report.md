@@ -132,11 +132,11 @@ iDeCoの最大のデメリットとよく言われるのが、「60歳まで引�
 
 ## もっと詳しく知りたい方へ
 
-iDeCoを始めるまでの話はこちら → [iDeCoを始めた話——老後に開けるお楽しみボックス](/blog/idecoを始めた話老後に開けるお楽しみボックス/)
+iDeCoを始めるまでの話はこちら → [iDeCoを始めた話——老後に開けるお楽しみボックス](/blog/how-i-started-ideco/)
 
-おすすめの口座はこちら → [松井証券iDeCoの特徴と申込み手順——公務員におすすめの理由](/blog/松井証券idecoの特徴と申込み手順公務員におすすめの理由/)
+おすすめの口座はこちら → [松井証券iDeCoの特徴と申込み手順——公務員におすすめの理由](/blog/matsui-ideco-guide/)
 
-iDeCoとNISAどちらを先にやるかはこちら → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/idecoとnisaどちらを先にやるべきか公務員の正解/)
+iDeCoとNISAどちらを先にやるかはこちら → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa-for-civil-servants/)
 
 ---
 

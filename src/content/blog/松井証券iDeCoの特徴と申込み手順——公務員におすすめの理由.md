@@ -2,6 +2,7 @@
 title: '松井証券iDeCoの特徴と申込み手順——公務員におすすめの理由'
 description: '松井証券iDeCoの強みと6ステップの申込み手順を解説。手数料0円・40種類の商品・ポイント還元と、公務員が得する節税シミュレーションも紹介します。'
 pubDate: '2026-04-25'
+slug: matsui-ideco-guide
 heroImage: '../../assets/matsui-ideco-guide.png'
 ---
 

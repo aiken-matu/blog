@@ -67,7 +67,7 @@ heroImage: '../../assets/index-fund-start-guide.png'
 
 生活に支障が出ない金額で始めてください。慣れてきて、余裕が出てきたら、少しずつ増やせばいい。最初から完璧な金額を設定しなくていいです。
 
-→ 月1万円からの積立投資について詳しく書いた記事はこちら：[月1万円から始める積立投資のやり方](/blog/月1万円から始める積立投資のやり方/)
+→ 月1万円からの積立投資について詳しく書いた記事はこちら：[月1万円から始める積立投資のやり方](/blog/how-to-start-monthly-investing-10000-yen/)
 
 ---
 
@@ -111,7 +111,7 @@ heroImage: '../../assets/index-fund-start-guide.png'
 - SBI証券 → [LINK_SBI証券]
 - 楽天証券 → [LINK_楽天証券]
 
-証券口座の選び方について詳しく知りたい方はこちら：[証券口座の開き方【SBI・楽天比較】](/blog/証券口座の開き方sbi楽天比較/)
+証券口座の選び方について詳しく知りたい方はこちら：[証券口座の開き方【SBI・楽天比較】](/blog/how-to-open-brokerage-account-sbi-rakuten/)
 
 ---
 

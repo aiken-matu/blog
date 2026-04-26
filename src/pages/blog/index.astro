@@ -27,7 +27,7 @@ const posts = (await getCollection('blog'))
 
 			<div class="card-grid">
 				{posts.map((post) => (
-					<a href={`/blog/${post.id}/`} class="card">
+					<a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
 						{post.data.heroImage && (
 							<div class="card-img-wrap">
 								<Image
