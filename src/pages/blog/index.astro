@@ -10,6 +10,60 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog'))
 	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// slug → category mapping
+// effective slug = post.data.slug ?? post.id
+const categoryMap: Record<string, string> = {
+	// ① 高配当株・配当投資
+	'how-to-buy-dividend-stocks-with-nisa':  'dividend',
+	'dividend-covers-fixed-costs':           'dividend',
+	'dividend-cut-patterns':                 'dividend',
+	'dividend-stock-first-step':             'dividend',
+	'growing-dividend-stocks-appeal':        'dividend',
+	'high-dividend-stock-selection':         'dividend',
+	'how-much-capital-for-dividend-life':    'dividend',
+	'nisa-dividend-road':                    'dividend',
+	'portfolio-design':                      'dividend',
+	'sekisui-house-dividend-analysis':       'dividend',
+	'tosoh-dividend-risk-analysis':          'dividend',
+	'what-is-sector-diversification':        'dividend',
+	// ② 投資の始め方
+	'how-i-started-ideco':                   'start',
+	'how-to-open-brokerage-account-sbi-rakuten': 'start',
+	'how-to-start-monthly-investing-10000-yen':  'start',
+	'ideco-performance-report':              'start',
+	'ideco-vs-nisa-for-civil-servants':      'start',
+	'index-fund-start-guide':                'start',
+	'matsui-ideco-guide':                    'start',
+	'sbi-securities-account-open':           'start',
+	// ③ お金の管理
+	'dneobank-sbi-review':                   'money',
+	'insurance-review-guide':                'money',
+	'investment-fund-creation':              'money',
+	'rakuten-bank-guide':                    'money',
+	'rakuten-card-diamond':                  'money',
+	'smbc-gold-nl-10000points':              'money',
+	'smbc-gold-nl-100man':                   'money',
+	// ④ 投資マインド・公務員
+	'civil-servant-investment-overview':     'mindset',
+	'civil-servant-retirement-pension':      'mindset',
+	'civil-servant-salary-investing':        'mindset',
+	'family-investment-talk':                'mindset',
+	'mental-health-for-investing':           'mindset',
+	'no-materialism-after-investing':        'mindset',
+	'no-panic-sell-corona-shock':            'mindset',
+	'to-my-past-self-who-feared-investing':  'mindset',
+	'value-based-spending-mindset':          'mindset',
+	'why-i-started-investing-as-civil-servant': 'mindset',
+};
+
+const categories = [
+	{ key: 'all',      label: 'すべて' },
+	{ key: 'dividend', label: '高配当株・配当投資' },
+	{ key: 'start',    label: '投資の始め方' },
+	{ key: 'money',    label: 'お金の管理' },
+	{ key: 'mindset',  label: '投資マインド・公務員' },
+];
 ---
 
 <!doctype html>
@@ -22,48 +76,95 @@ const posts = (await getCollection('blog'))
 		<main>
 			<div class="page-header">
 				<h1>記事一覧</h1>
-				<p class="post-count">{posts.length}件の記事</p>
+				<p class="post-count" id="post-count">{posts.length}件の記事</p>
 			</div>
 
-			<div class="card-grid">
-				{posts.map((post) => (
-					<a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
-						{post.data.heroImage && (
-							<div class="card-img-wrap">
-								<Image
-									width={480}
-									height={240}
-									src={post.data.heroImage}
-									alt=""
-									style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0;"
-								/>
-							</div>
-						)}
-						<div class="card-body">
-							<p class="card-date">
-								<FormattedDate date={post.data.pubDate} />
-							</p>
-							<h2 class="card-title">{post.data.title}</h2>
-							{post.data.description && (
-								<p class="card-desc">{post.data.description}</p>
-							)}
-						</div>
-					</a>
+			<!-- カテゴリフィルター -->
+			<div class="filter-wrap" role="group" aria-label="カテゴリで絞り込む">
+				{categories.map((cat) => (
+					<button
+						class={`filter-btn${cat.key === 'all' ? ' active' : ''}`}
+						data-filter={cat.key}
+						type="button"
+					>
+						{cat.label}
+					</button>
 				))}
+			</div>
+
+			<div class="card-grid" id="card-grid">
+				{posts.map((post) => {
+					const effectiveSlug = post.data.slug ?? post.id;
+					const category = categoryMap[effectiveSlug] ?? 'other';
+					return (
+						<a
+							href={`/blog/${effectiveSlug}/`}
+							class="card"
+							data-category={category}
+						>
+							{post.data.heroImage && (
+								<div class="card-img-wrap">
+									<Image
+										width={480}
+										height={240}
+										src={post.data.heroImage}
+										alt=""
+										style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0;"
+									/>
+								</div>
+							)}
+							<div class="card-body">
+								<p class="card-date">
+									<FormattedDate date={post.data.pubDate} />
+								</p>
+								<h2 class="card-title">{post.data.title}</h2>
+								{post.data.description && (
+									<p class="card-desc">{post.data.description}</p>
+								)}
+							</div>
+						</a>
+					);
+				})}
 			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
 
+<script>
+	const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+	const cards   = document.querySelectorAll<HTMLElement>('.card');
+	const counter = document.getElementById('post-count');
+
+	function applyFilter(filter: string) {
+		let visible = 0;
+		cards.forEach((card) => {
+			const cat = card.dataset.category ?? 'other';
+			const show = filter === 'all' || cat === filter;
+			card.style.display = show ? '' : 'none';
+			if (show) visible++;
+		});
+		if (counter) counter.textContent = `${visible}件の記事`;
+
+		buttons.forEach((btn) => {
+			btn.classList.toggle('active', btn.dataset.filter === filter);
+		});
+	}
+
+	buttons.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			applyFilter(btn.dataset.filter ?? 'all');
+		});
+	});
+</script>
+
 <style>
 	main {
-		/* min() で 1000px とビューポット幅の小さい方を採用 → スマホで正しく収縮する */
 		max-width: min(1000px, calc(100% - 2em));
 	}
 
 	.page-header {
-		margin-bottom: 2em;
+		margin-bottom: 1.2em;
 		display: flex;
 		align-items: baseline;
 		gap: 1em;
@@ -82,7 +183,42 @@ const posts = (await getCollection('blog'))
 		margin: 0;
 	}
 
-	/* カードグリッド */
+	/* ── カテゴリフィルター ─────────────────────────────────────── */
+	.filter-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		margin-bottom: 1.8em;
+	}
+
+	.filter-btn {
+		padding: 0.42em 1.1em;
+		border-radius: 999px;
+		border: 1.5px solid #CBD5E1;
+		background: #ffffff;
+		color: #475569;
+		font-size: 0.85em;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+		white-space: nowrap;
+		font-family: inherit;
+	}
+
+	.filter-btn:hover {
+		border-color: #2563EB;
+		color: #2563EB;
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+	}
+
+	.filter-btn.active {
+		background: #1E3A8A;
+		border-color: #1E3A8A;
+		color: #ffffff;
+		box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+	}
+
+	/* ── カードグリッド ──────────────────────────────────────────── */
 	.card-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -107,7 +243,6 @@ const posts = (await getCollection('blog'))
 		text-decoration: none;
 	}
 
-	/* position:relative で absolute充填する画像コンテナ */
 	.card-img-wrap {
 		position: relative;
 		overflow: hidden;
@@ -116,7 +251,6 @@ const posts = (await getCollection('blog'))
 		border-radius: 12px 12px 0 0;
 	}
 
-	/* アイキャッチ画像がはみ出さないよう明示的に設定 */
 	.card-img-wrap img {
 		max-width: 100%;
 		height: auto;
@@ -176,6 +310,15 @@ const posts = (await getCollection('blog'))
 		.page-header {
 			flex-direction: column;
 			gap: 0.2em;
+		}
+
+		.filter-wrap {
+			gap: 0.4em;
+		}
+
+		.filter-btn {
+			font-size: 0.8em;
+			padding: 0.38em 0.9em;
 		}
 	}
 </style>
