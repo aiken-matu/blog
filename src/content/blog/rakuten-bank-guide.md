@@ -29,13 +29,13 @@ heroImage: '../../assets/rakuten-bank-guide.png'
 
 <div style="line-height: 2;">
 給与入金（楽天銀行）<br>
-↓<br>
+　↓<br>
 楽天カードの引き落とし（日常の変動費）<br>
-↓<br>
+　↓<br>
 dNEOBANKへ定額自動入金（毎月決まった額を移動）<br>
-↓<br>
+　↓<br>
 SBIハイブリッド預金へ自動振替<br>
-↓<br>
+　↓<br>
 SBI証券で高配当株を購入
 </div>
 
