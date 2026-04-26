@@ -1,63 +1,63 @@
-# Astro Starter Kit: Blog
+# 配当日和 — haitobiyori.com
 
-```sh
-npm create astro@latest -- --template blog
-```
+公務員投資家トニー（@haitobiyori）が運営する高配当株投資ブログ。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-Features:
+## サイト概要
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+| 項目 | 内容 |
+|---|---|
+| URL | https://haitobiyori.com |
+| フレームワーク | Astro v5 |
+| ホスティング | Cloudflare Workers |
+| デプロイ | git push → Cloudflare 自動ビルド |
+| Xアカウント | @haitobiyori（こうむいん投資家トニー） |
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 記事状況
 
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+- 実記事：28本
+- 全記事に内部リンク設置済み（孤立記事ゼロ）
+- OGP設定済み（og:image / og:image:width / og:image:height / twitter:card）
+- 英語slug設定済み記事あり
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## よく使うコマンド
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+| コマンド | 内容 |
+|---|---|
+| `npm run dev` | ローカル開発サーバー起動（localhost:4321） |
+| `npm run build` | 本番用ビルド（./dist/ に出力） |
+| `node generate-all-images.mjs` | 全アイキャッチ画像（34枚）を再生成 |
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## 重要ファイル
 
-All commands are run from the root of the project, from a terminal:
+| ファイル | 役割 |
+|---|---|
+| `src/content/blog/` | 記事Markdownファイル |
+| `src/assets/` | アイキャッチ画像（1200×630px PNG） |
+| `generate-all-images.mjs` | 画像一括生成スクリプト |
+| `src/components/BaseHead.astro` | OGP・メタタグ管理 |
+| `src/layouts/BlogPost.astro` | 記事ページレイアウト |
+| `src/pages/index.astro` | トップページ |
+| `src/pages/blog/index.astro` | 記事一覧ページ |
+| `astro.config.mjs` | Astro設定（site: https://haitobiyori.com） |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 残タスク（アフィリエイトURL）
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+以下のプレースホルダーはURLが確定次第差し替える：
 
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+| ファイル | プレースホルダー |
+|---|---|
+| dividend-stock-first-step.md | [LINK_SBI証券] |
+| index-fund-start-guide.md | [LINK_SBI証券] [LINK_楽天証券] |
+| investment-fund-creation.md | [LINK_SBI証券] |
+| rakuten-bank-guide.md | [LINK_楽天銀行] |
+| iDeCoとNISAどちらを先にやるべきか.md | 松井証券iDeCo アフィリエイトリンク |
