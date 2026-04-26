@@ -58,7 +58,8 @@ const posts = (await getCollection('blog'))
 
 <style>
 	main {
-		max-width: 1000px;
+		/* min() で 1000px とビューポット幅の小さい方を採用 → スマホで正しく収縮する */
+		max-width: min(1000px, calc(100% - 2em));
 	}
 
 	.page-header {
@@ -113,6 +114,13 @@ const posts = (await getCollection('blog'))
 		height: 160px;
 		flex-shrink: 0;
 		border-radius: 12px 12px 0 0;
+	}
+
+	/* アイキャッチ画像がはみ出さないよう明示的に設定 */
+	.card-img-wrap img {
+		max-width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.card-body {
