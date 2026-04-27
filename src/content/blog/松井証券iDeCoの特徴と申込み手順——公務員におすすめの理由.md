@@ -155,6 +155,9 @@ iDeCoの最大のメリットは、**掛金が全額「小規模企業共済等�
 
 手数料がかからず、商品も選びやすい松井証券のiDeCoは、これからiDeCoを始めたい方にとって検討する価値のある選択肢だと思っています。
 
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1THS+7VECQA+3XCC+BXIYQ" rel="nofollow">松井証券ではじめるiDeCo</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B1THS+7VECQA+3XCC+BXIYQ" alt="">
+
 ---
 
 *iDeCoは「今は使えないお金」です。だからこそ、じっくり育てられる。老後の自分への、地道な仕送りだと思っています。*
