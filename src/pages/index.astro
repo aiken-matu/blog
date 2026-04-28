@@ -8,10 +8,40 @@ import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import OgSiteImage from '../assets/og-site.png';
 
-const posts = (await getCollection('blog'))
-	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id))
+const allPosts = (await getCollection('blog'))
+	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id));
+
+// 最新記事 6件
+const latestPosts = allPosts
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 6);
+
+// おすすめ記事をスラグで取得
+const getPost = (slug: string) => allPosts.find(p => (p.data.slug ?? p.id) === slug);
+
+const recommended = [
+	{
+		label: '高配当株・配当投資',
+		posts: [
+			getPost('high-dividend-buy-timing'),
+			getPost('mitsubishi-corp-dividend-analysis'),
+		],
+	},
+	{
+		label: '投資の始め方',
+		posts: [
+			getPost('index-fund-start-guide'),
+			getPost('sbi-securities-account-open'),
+		],
+	},
+	{
+		label: '投資マインド・公務員',
+		posts: [
+			getPost('lifelong-investor-confidence'),
+			getPost('investment-mindset-continue'),
+		],
+	},
+];
 ---
 
 <!doctype html>
@@ -22,26 +52,77 @@ const posts = (await getCollection('blog'))
 	<body>
 		<Header />
 		<main>
-			<!-- ヒーローセクション -->
+
+			<!-- ① ヒーローセクション -->
 			<section class="hero">
 				<div class="hero-accent-line"></div>
 				<div class="hero-content">
-					<h1 class="hero-title">配当日和</h1>
-					<p class="hero-sub">お金も私も働く、公務員の小さな自由計画</p>
+					<p class="hero-eyebrow">公務員×高配当株投資ブログ</p>
+					<h1 class="hero-title">配当金で、<br class="sp-only">自由を手に入れる</h1>
 					<p class="hero-desc">
 						40代公務員が、高配当株・インデックス投資・iDeCoを組み合わせながら<br>
-						「配当金で生活費を賄える日」を目指して歩む記録です。
+						配当金で生活費を賄える日を目指す、リアルな資産形成ブログです。
 					</p>
+
+					<!-- 実績バッジ -->
+					<div class="badges">
+						<div class="badge">
+							<span class="badge-num">約90万円</span>
+							<span class="badge-label">年間配当金</span>
+						</div>
+						<div class="badge">
+							<span class="badge-num">100銘柄以上</span>
+							<span class="badge-label">保有銘柄</span>
+						</div>
+						<div class="badge">
+							<span class="badge-num">約10年</span>
+							<span class="badge-label">投資歴</span>
+						</div>
+					</div>
+
 					<a href="/blog" class="hero-btn">記事を読む →</a>
 				</div>
 				<div class="hero-deco" aria-hidden="true"></div>
 			</section>
 
-			<!-- 最新記事 -->
+			<!-- ② カテゴリ別おすすめ記事 -->
+			<section class="recommend">
+				<h2 class="section-title">カテゴリ別おすすめ記事</h2>
+				{recommended.map((cat) => (
+					<div class="rec-category">
+						<h3 class="rec-label">{cat.label}</h3>
+						<div class="rec-grid">
+							{cat.posts.map((post) => post && (
+								<a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
+									{post.data.heroImage && (
+										<div class="card-img-wrap">
+											<Image
+												width={480}
+												height={240}
+												src={post.data.heroImage}
+												alt=""
+												style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0;"
+											/>
+										</div>
+									)}
+									<div class="card-body">
+										<h4 class="card-title">{post.data.title}</h4>
+										{post.data.description && (
+											<p class="card-desc">{post.data.description}</p>
+										)}
+									</div>
+								</a>
+							))}
+						</div>
+					</div>
+				))}
+			</section>
+
+			<!-- ③ 最新記事 -->
 			<section class="latest">
 				<h2 class="section-title">最新の記事</h2>
 				<div class="card-grid">
-					{posts.map((post) => (
+					{latestPosts.map((post) => (
 						<a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
 							{post.data.heroImage && (
 								<div class="card-img-wrap">
@@ -67,16 +148,17 @@ const posts = (await getCollection('blog'))
 					))}
 				</div>
 				<div class="see-all">
-					<a href="/blog" class="see-all-btn">すべての記事を見る →</a>
+					<a href="/blog" class="see-all-btn">記事一覧を見る →</a>
 				</div>
 			</section>
+
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-	/* ヒーロー */
+	/* ── ヒーロー ──────────────────────────────────────────────── */
 	.hero {
 		background:
 			radial-gradient(ellipse at 92% 100%, rgba(167, 243, 208, 0.30) 0%, transparent 48%),
@@ -90,47 +172,40 @@ const posts = (await getCollection('blog'))
 		overflow: hidden;
 	}
 
-	/* 左側の細いブルーアクセントライン */
 	.hero-accent-line {
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 4px;
-		height: 100%;
+		top: 0; left: 0;
+		width: 4px; height: 100%;
 		background: linear-gradient(180deg, #93C5FD 0%, #BFDBFE 70%, transparent 100%);
 		border-radius: 16px 0 0 16px;
 	}
 
-	/* 右下のふわっとした薄いグリーン装飾 */
 	.hero-deco {
 		position: absolute;
-		bottom: -60px;
-		right: -60px;
-		width: 220px;
-		height: 220px;
+		bottom: -60px; right: -60px;
+		width: 220px; height: 220px;
 		border-radius: 50%;
-		background: radial-gradient(circle, rgba(110, 231, 183, 0.20) 0%, rgba(167, 243, 208, 0.08) 50%, transparent 70%);
+		background: radial-gradient(circle, rgba(110,231,183,0.20) 0%, rgba(167,243,208,0.08) 50%, transparent 70%);
 		pointer-events: none;
 	}
 
-	.hero-content {
-		position: relative;
-		z-index: 1;
+	.hero-content { position: relative; z-index: 1; }
+
+	.hero-eyebrow {
+		font-size: 0.82em;
+		color: #3B82F6;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		margin: 0 0 0.6em 0;
 	}
 
 	.hero-title {
-		font-size: 2.8em;
+		font-size: 2.6em;
 		color: #1D4ED8;
-		margin: 0 0 0.2em 0;
-		letter-spacing: 0.05em;
+		margin: 0 0 0.5em 0;
+		letter-spacing: 0.02em;
+		line-height: 1.3;
 		border-bottom: none;
-	}
-
-	.hero-sub {
-		font-size: 0.95em;
-		color: #3B82F6;
-		margin: 0 0 1em 0;
-		font-weight: 500;
 	}
 
 	.hero-desc {
@@ -138,6 +213,41 @@ const posts = (await getCollection('blog'))
 		color: #475569;
 		margin: 0 0 1.8em 0;
 		line-height: 1.9;
+	}
+
+	/* 実績バッジ */
+	.badges {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		flex-wrap: wrap;
+		margin-bottom: 1.8em;
+	}
+
+	.badge {
+		background: #FFFFFF;
+		border: 1.5px solid #BFDBFE;
+		border-radius: 10px;
+		padding: 0.6em 1.2em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.15em;
+		min-width: 110px;
+		box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+	}
+
+	.badge-num {
+		font-size: 1.05em;
+		font-weight: 800;
+		color: #1D4ED8;
+		white-space: nowrap;
+	}
+
+	.badge-label {
+		font-size: 0.72em;
+		color: #64748B;
+		font-weight: 500;
 	}
 
 	.hero-btn {
@@ -150,17 +260,17 @@ const posts = (await getCollection('blog'))
 		font-size: 0.95em;
 		text-decoration: none;
 		transition: opacity 0.2s, box-shadow 0.2s;
-		box-shadow: 0 2px 10px rgba(5, 150, 105, 0.25);
+		box-shadow: 0 2px 10px rgba(5,150,105,0.25);
 	}
 
 	.hero-btn:hover {
 		opacity: 0.88;
-		box-shadow: 0 4px 16px rgba(5, 150, 105, 0.35);
+		box-shadow: 0 4px 16px rgba(5,150,105,0.35);
 		text-decoration: none;
 		color: #FFFFFF;
 	}
 
-	/* セクションタイトル */
+	/* ── セクション共通 ────────────────────────────────────────── */
 	.section-title {
 		font-size: 1.3em;
 		color: #1E293B;
@@ -169,19 +279,49 @@ const posts = (await getCollection('blog'))
 		border-bottom: 2px solid #A7F3D0;
 	}
 
-	/* カードグリッド */
+	/* ── おすすめ記事 ──────────────────────────────────────────── */
+	.recommend {
+		margin-bottom: 3em;
+	}
+
+	.rec-category {
+		margin-bottom: 2.2em;
+	}
+
+	.rec-label {
+		font-size: 0.92em;
+		font-weight: 700;
+		color: #1E3A8A;
+		background: #EEF2FF;
+		display: inline-block;
+		padding: 0.3em 0.9em;
+		border-radius: 6px;
+		margin: 0 0 0.9em 0;
+		border-bottom: none;
+	}
+
+	.rec-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.2em;
+	}
+
+	/* ── 最新記事 ──────────────────────────────────────────────── */
+	.latest { margin-bottom: 2em; }
+
 	.card-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1.4em;
 	}
 
+	/* ── カード共通 ────────────────────────────────────────────── */
 	.card {
 		display: flex;
 		flex-direction: column;
 		background: #FFFFFF;
 		border-radius: 12px;
-		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(37, 99, 235, 0.07);
+		box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(37,99,235,0.07);
 		text-decoration: none;
 		color: inherit;
 		overflow: hidden;
@@ -189,12 +329,11 @@ const posts = (await getCollection('blog'))
 	}
 
 	.card:hover {
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10), 0 8px 24px rgba(37, 99, 235, 0.12);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 8px 24px rgba(37,99,235,0.12);
 		transform: translateY(-3px);
 		text-decoration: none;
 	}
 
-	/* position:relative で absolute充填する画像コンテナ */
 	.card-img-wrap {
 		position: relative;
 		overflow: hidden;
@@ -226,9 +365,7 @@ const posts = (await getCollection('blog'))
 		border-bottom: none;
 	}
 
-	.card:hover .card-title {
-		color: #2563EB;
-	}
+	.card:hover .card-title { color: #2563EB; }
 
 	.card-desc {
 		font-size: 0.8em;
@@ -241,11 +378,8 @@ const posts = (await getCollection('blog'))
 		overflow: hidden;
 	}
 
-	/* もっと見る */
-	.see-all {
-		text-align: center;
-		margin-top: 2em;
-	}
+	/* ── もっと見る ────────────────────────────────────────────── */
+	.see-all { text-align: center; margin-top: 2em; }
 
 	.see-all-btn {
 		display: inline-block;
@@ -265,23 +399,30 @@ const posts = (await getCollection('blog'))
 		text-decoration: none;
 	}
 
+	/* ── レスポンシブ ──────────────────────────────────────────── */
+	.sp-only { display: none; }
+
 	@media (max-width: 800px) {
-		.card-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
+		.card-grid { grid-template-columns: repeat(2, 1fr); }
 	}
 
 	@media (max-width: 540px) {
+		.sp-only { display: inline; }
+
 		.hero {
 			padding: 2em 1.2em;
 		}
 
-		.hero-title {
-			font-size: 2em;
-		}
+		.hero-title { font-size: 1.9em; }
 
-		.card-grid {
-			grid-template-columns: 1fr;
-		}
+		.badges { gap: 0.6em; }
+
+		.badge { min-width: 90px; padding: 0.5em 0.8em; }
+
+		.badge-num { font-size: 0.95em; }
+
+		.rec-grid { grid-template-columns: 1fr; }
+
+		.card-grid { grid-template-columns: 1fr; }
 	}
 </style>
