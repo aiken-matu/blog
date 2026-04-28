@@ -95,7 +95,7 @@ const recommended = [
 							{cat.posts.map((post) => post && (
 								<a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
 									{post.data.heroImage && (
-										<div class="card-img-wrap">
+										<div class="card-img-wrap rec-img-wrap">
 											<Image
 												width={480}
 												height={240}
@@ -107,9 +107,6 @@ const recommended = [
 									)}
 									<div class="card-body">
 										<h4 class="card-title">{post.data.title}</h4>
-										{post.data.description && (
-											<p class="card-desc">{post.data.description}</p>
-										)}
 									</div>
 								</a>
 							))}
@@ -302,8 +299,12 @@ const recommended = [
 
 	.rec-grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1.2em;
+	}
+
+	.rec-img-wrap {
+		height: 120px !important;
 	}
 
 	/* ── 最新記事 ──────────────────────────────────────────────── */
@@ -422,6 +423,8 @@ const recommended = [
 		.badge-num { font-size: 0.95em; }
 
 		.rec-grid { grid-template-columns: 1fr; }
+
+		.rec-img-wrap { height: 110px !important; }
 
 		.card-grid { grid-template-columns: 1fr; }
 	}
