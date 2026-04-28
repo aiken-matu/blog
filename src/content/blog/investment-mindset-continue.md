@@ -94,6 +94,4 @@ slug: 'investment-mindset-continue'
 
 ---
 
-[LINK_投資マインド記事]
-
-※内部リンクは後日設置予定
+[投資歴10年で変わったこと——「生涯投資家でいられる自信」がついた理由](/blog/lifelong-investor-confidence/)
