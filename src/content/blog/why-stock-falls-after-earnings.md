@@ -140,7 +140,10 @@ slug: "why-stock-falls-after-earnings"
 
 ### 関連記事
 
-→ [高配当株の銘柄選定——愛せる企業に出会うために](/blog/dividend-stock-first-step/)
-→ [配当利回りだけで買って後悔…私がジャックスで40%暴落を経験して学んだこと](/blog/jacks-failure-lesson/)
-→ [【決算直前】三菱商事は買いか？株価下落の理由と「次に動くシナリオ」を徹底解説](/blog/mitsubishi-corp-dividend-analysis/)
-→ [【銘柄分析】イオン｜過去最高益でも株価が下落する理由を徹底解説](/blog/aeon-stock-analysis/)
+- [高配当株の銘柄選定——愛せる企業に出会うために](/blog/dividend-stock-first-step/)
+
+- [配当利回りだけで買って後悔…私がジャックスで40%暴落を経験して学んだこと](/blog/jacks-failure-lesson/)
+
+- [【決算直前】三菱商事は買いか？株価下落の理由と「次に動くシナリオ」を徹底解説](/blog/mitsubishi-corp-dividend-analysis/)
+
+- [【銘柄分析】イオン｜過去最高益でも株価が下落する理由を徹底解説](/blog/aeon-stock-analysis/)
