@@ -136,7 +136,7 @@ iDeCoを始めるまでの話はこちら → [iDeCoを始めた話——老後�
 
 おすすめの口座はこちら → [松井証券iDeCoの特徴と申込み手順——公務員におすすめの理由](/blog/matsui-ideco-guide/)
 
-iDeCoとNISAどちらを先にやるかはこちら → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa-for-civil-servants/)
+iDeCoとNISAどちらを先にやるかはこちら → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa/)
 
 ---
 

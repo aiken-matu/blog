@@ -2,6 +2,7 @@
 title: '「今すぐ始めていい」——積立投資を始めるのにいいタイミングなんて存在しない'
 description: '相場が落ち着いたら始めよう。貯金が増えたら始めよう。そのいつかは、来ません。積立投資を今日始めるべき理由と、月1万円からの具体的な始め方を書きます。'
 pubDate: '2026-04-26'
+slug: 'investment-start-now'
 heroImage: '../../assets/index-fund-start-guide.png'
 ---
 

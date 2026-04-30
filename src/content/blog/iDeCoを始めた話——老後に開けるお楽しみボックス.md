@@ -155,4 +155,4 @@ iDeCoに興味はあるけれど、まだ始めていないという方もいら
 
 将来の自分のために、小さな一歩を踏み出してみてはいかがでしょうか。
 
-iDeCoとNISAどちらを先にやるべきか → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa-for-civil-servants/)
+iDeCoとNISAどちらを先にやるべきか → [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa/)

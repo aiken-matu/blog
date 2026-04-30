@@ -2,7 +2,7 @@
 title: 'iDeCoとNISAどちらを先にやるべきか——公務員の正解'
 description: '公務員はiDeCoを先に始めるべき。掛金が全額所得控除になる節税メリットはNISAにはない唯一の強みです。iDeCoとNISAの違いと、公務員の正しい順番を解説します。'
 pubDate: '2026-04-25'
-slug: ideco-vs-nisa-for-civil-servants
+slug: ideco-vs-nisa
 heroImage: '../../assets/ideco-vs-nisa-koumuin.png'
 ---
 
