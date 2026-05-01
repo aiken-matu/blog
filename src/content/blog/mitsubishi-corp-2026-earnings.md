@@ -247,5 +247,6 @@ slug: "mitsubishi-corp-2026-earnings"
 
 ### 関連記事
 
-→ [なぜ好決算でも株価は下がるのか？初心者でもわかる仕組みと投資判断のコツ](/blog/why-stock-falls-after-earnings/)
-→ [高配当株に「買い時の正解」はない——それでも私が買い続ける3つの理由](/blog/high-dividend-buy-timing/)
+- [なぜ好決算でも株価は下がるのか？初心者でもわかる仕組みと投資判断のコツ](/blog/why-stock-falls-after-earnings/)
+
+- [高配当株に「買い時の正解」はない——それでも私が買い続ける3つの理由](/blog/high-dividend-buy-timing/)
