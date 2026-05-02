@@ -99,20 +99,23 @@ const categories = [
 			</div>
 
 			<!-- カテゴリフィルター -->
-			<div class="filter-wrap" role="group" aria-label="カテゴリで絞り込む">
-				{categories.map((cat) => (
-					<button
-						class={`filter-btn${cat.key === 'all' ? ' active' : ''}`}
-						data-filter={cat.key}
-						type="button"
-					>
-						{cat.label}
-					</button>
-				))}
+			<div class="filter-section">
+				<p class="filter-label">カテゴリで絞り込む</p>
+				<div class="filter-wrap" role="group" aria-label="カテゴリで絞り込む">
+					{categories.map((cat) => (
+						<button
+							class={`filter-btn${cat.key === 'all' ? ' active' : ''}`}
+							data-filter={cat.key}
+							type="button"
+						>
+							{cat.label}
+						</button>
+					))}
+				</div>
 			</div>
 
 			<div class="card-grid" id="card-grid">
-				{posts.map((post) => {
+				{posts.map((post, i) => {
 					const effectiveSlug = post.data.slug ?? post.id;
 					const category = categoryMap[effectiveSlug] ?? 'other';
 					return (
@@ -120,6 +123,7 @@ const categories = [
 							href={`/blog/${effectiveSlug}/`}
 							class="card"
 							data-category={category}
+							data-index={i}
 						>
 							{post.data.heroImage && (
 								<div class="card-img-wrap">
@@ -145,28 +149,64 @@ const categories = [
 					);
 				})}
 			</div>
+
+			<!-- もっと見るボタン -->
+			<div class="load-more-wrap" id="load-more-wrap">
+				<button class="load-more-btn" id="load-more-btn" type="button">
+					記事をもっと見る →
+				</button>
+			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <script>
-	const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-	const cards   = document.querySelectorAll<HTMLElement>('.card');
-	const counter = document.getElementById('post-count');
+	const INITIAL_LIMIT = 18;
+
+	const buttons     = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+	const cards       = document.querySelectorAll<HTMLElement>('.card');
+	const counter     = document.getElementById('post-count');
+	const loadMoreWrap = document.getElementById('load-more-wrap');
+	const loadMoreBtn  = document.getElementById('load-more-btn');
+
+	let currentFilter = 'all';
+	let showAll = false;
 
 	function applyFilter(filter: string) {
+		currentFilter = filter;
 		let visible = 0;
+
 		cards.forEach((card) => {
-			const cat = card.dataset.category ?? 'other';
-			const show = filter === 'all' || cat === filter;
+			const cat   = card.dataset.category ?? 'other';
+			const idx   = parseInt(card.dataset.index ?? '0', 10);
+			const matchesFilter = filter === 'all' || cat === filter;
+			// カテゴリ絞り込み中は件数制限なし。「すべて」かつ showAll=false なら18件まで
+			const withinLimit = filter !== 'all' || showAll || idx < INITIAL_LIMIT;
+			const show = matchesFilter && withinLimit;
 			card.style.display = show ? '' : 'none';
 			if (show) visible++;
 		});
+
 		if (counter) counter.textContent = `${visible}件の記事`;
 
 		buttons.forEach((btn) => {
 			btn.classList.toggle('active', btn.dataset.filter === filter);
+		});
+
+		// 「もっと見る」ボタンの表示制御
+		// 「すべて」かつ未展開かつ全記事が18件超の場合のみ表示
+		if (loadMoreWrap) {
+			const shouldShow = !showAll && filter === 'all' && cards.length > INITIAL_LIMIT;
+			loadMoreWrap.style.display = shouldShow ? '' : 'none';
+		}
+	}
+
+	// 「もっと見る」クリック
+	if (loadMoreBtn) {
+		loadMoreBtn.addEventListener('click', () => {
+			showAll = true;
+			applyFilter(currentFilter);
 		});
 	}
 
@@ -175,6 +215,9 @@ const categories = [
 			applyFilter(btn.dataset.filter ?? 'all');
 		});
 	});
+
+	// 初期表示
+	applyFilter('all');
 </script>
 
 <style>
@@ -203,21 +246,33 @@ const categories = [
 	}
 
 	/* ── カテゴリフィルター ─────────────────────────────────────── */
-	.filter-wrap {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5em;
+	.filter-section {
 		margin-bottom: 1.8em;
 	}
 
+	.filter-label {
+		font-size: 0.8em;
+		font-weight: 700;
+		color: #64748B;
+		letter-spacing: 0.05em;
+		margin: 0 0 0.6em 0;
+		text-transform: uppercase;
+	}
+
+	.filter-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6em;
+	}
+
 	.filter-btn {
-		padding: 0.42em 1.1em;
+		padding: 0.55em 1.4em;
 		border-radius: 999px;
-		border: 1.5px solid #CBD5E1;
+		border: 2px solid #CBD5E1;
 		background: #ffffff;
 		color: #475569;
-		font-size: 0.85em;
-		font-weight: 600;
+		font-size: 0.9em;
+		font-weight: 700;
 		cursor: pointer;
 		transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
 		white-space: nowrap;
@@ -235,6 +290,31 @@ const categories = [
 		border-color: #1E3A8A;
 		color: #ffffff;
 		box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+	}
+
+	/* ── もっと見るボタン ───────────────────────────────────────── */
+	.load-more-wrap {
+		text-align: center;
+		margin-top: 2.5em;
+	}
+
+	.load-more-btn {
+		display: inline-block;
+		border: 2px solid #2563EB;
+		color: #2563EB;
+		background: #ffffff;
+		padding: 0.7em 2.4em;
+		border-radius: 8px;
+		font-weight: 700;
+		font-size: 0.95em;
+		cursor: pointer;
+		font-family: inherit;
+		transition: background-color 0.2s, color 0.2s;
+	}
+
+	.load-more-btn:hover {
+		background-color: #2563EB;
+		color: #ffffff;
 	}
 
 	/* ── カードグリッド ──────────────────────────────────────────── */
@@ -336,8 +416,8 @@ const categories = [
 		}
 
 		.filter-btn {
-			font-size: 0.8em;
-			padding: 0.38em 0.9em;
+			font-size: 0.82em;
+			padding: 0.48em 1.0em;
 		}
 	}
 </style>
