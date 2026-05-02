@@ -1,5 +1,5 @@
 # 配当日和 引き継ぎ文
-## 2026年5月2日時点
+## 2026年5月3日時点
 
 ## ブログ基本情報
 - ブログ名：配当日和
@@ -38,7 +38,7 @@
 - git add → git commit → git push：デプロイ
 
 ## 記事数
-- 全57本以上（テンプレ除く実記事）
+- 全62本以上（テンプレ除く実記事）
 - 全記事に英語slug設定済み
 - 全記事に内部リンク設置済み・孤立記事ゼロ
 
@@ -74,6 +74,7 @@
 - 第4弾：イオン（好決算でも株価が下落する理由）
 - 第5弾：三菱商事（決算直前・買いか？）
 - 第6弾：NTT（2026年5月決算前分析）
+- 第7弾：オリエンタルランド（株価64%下落の理由・理論株価の2本構成）
 - 今後も週1〜2本継続予定
 - 100銘柄以上保有 → ネタは1年以上ある
 
@@ -114,6 +115,12 @@
 | yellow-hat-dividend-analysis.md | [LINK_SBI証券] |
 | high-dividend-buy-timing.md | [LINK_SBI証券] |
 | car-insurance-insweb-review.md | [LINK_インズウェブ] |
+| ntt-dividend-analysis-2026.md | [LINK_SBI証券] |
+| nisa-beginner-fear-guide.md | [LINK_SBI証券] [LINK_楽天証券] |
+| investment-savings-guide.md | [LINK_SBI証券] [LINK_楽天証券] |
+| oriental-land-stock-analysis.md | リンクなし（高配当株でないため） |
+| oriental-land-fair-value.md | リンクなし（高配当株でないため） |
+| investor-gw-guide.md | リンクなし |
 | matsui-ideco-guide.md | ✅設置済み |
 
 ## 投資家プロフィール
@@ -141,9 +148,9 @@
   （A8.net：住信SBI・三井住友NL審査中）
   （TGアフィリエイト：楽天証券・楽天iDeCo審査中）
   （TCSアフィリエイト：SBI証券2件審査中）
-②銘柄分析シリーズを週1〜2本継続
-③Xの投稿を週3〜4回継続
-④Googleインデックスの状況を週1で確認
-⑤NTT決算後の記事を書く（5/8発表予定）
-⑥楽天証券専用記事を書く
-⑦初心者導線記事を充実させる
+②NTT決算後の記事を書く（5/8発表予定）
+③楽天証券専用記事を書く
+④初心者向け記事を継続して書く
+⑤銘柄分析シリーズを週1〜2本継続
+⑥Xの投稿を週3〜4回継続
+⑦Googleインデックスの状況を週1で確認
