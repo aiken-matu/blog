@@ -1,5 +1,5 @@
 # 配当日和 引き継ぎ文
-## 2026年5月3日時点
+## 2026年5月4日時点
 
 ## ブログ基本情報
 - ブログ名：配当日和
@@ -38,7 +38,7 @@
 - git add → git commit → git push：デプロイ
 
 ## 記事数
-- 全62本以上（テンプレ除く実記事）
+- 全72本以上（テンプレ除く実記事）
 - 全記事に英語slug設定済み
 - 全記事に内部リンク設置済み・孤立記事ゼロ
 
@@ -118,6 +118,12 @@
 | ntt-dividend-analysis-2026.md | [LINK_SBI証券] |
 | nisa-beginner-fear-guide.md | [LINK_SBI証券] [LINK_楽天証券] |
 | investment-savings-guide.md | [LINK_SBI証券] [LINK_楽天証券] |
+| high-dividend-basics-beginner.md | [LINK_SBI証券] [LINK_楽天証券] |
+| high-dividend-recommended-stocks.md | [LINK_SBI証券] [LINK_楽天証券] |
+| bad-high-dividend-stocks.md | リンクなし |
+| nisa-growth-dividend-stocks.md | [LINK_SBI証券] [LINK_楽天証券] |
+| jt-dividend-stock-analysis.md | [LINK_SBI証券] [LINK_楽天証券] |
+| bad-dividend-stock-guide.md | リンクなし |
 | oriental-land-stock-analysis.md | リンクなし（高配当株でないため） |
 | oriental-land-fair-value.md | リンクなし（高配当株でないため） |
 | investor-gw-guide.md | リンクなし |
@@ -150,7 +156,6 @@
   （TCSアフィリエイト：SBI証券2件審査中）
 ②NTT決算後の記事を書く（5/8発表予定）
 ③楽天証券専用記事を書く
-④初心者向け記事を継続して書く
-⑤銘柄分析シリーズを週1〜2本継続
-⑥Xの投稿を週3〜4回継続
-⑦Googleインデックスの状況を週1で確認
+④銘柄分析シリーズを週1〜2本継続
+⑤Xの投稿を週3〜4回継続
+⑥Googleインデックスの状況を週1で確認
