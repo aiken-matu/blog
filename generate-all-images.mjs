@@ -311,6 +311,13 @@ const images = [
     subtitle: null,
     features: ['暴落耐性', '長期視点', '配当継続'] },
 
+  // ── TEAL（銘柄分析：NTT決算チェックポイント）─────────────────────────────
+  { file: 'ntt-earnings-checklist.png', ...P.teal,
+    tags: ['銘柄分析', 'NTT', '決算'],
+    title: ['【銘柄分析】NTT', '決算で何を見るべき？', '初心者向けチェックポイント'],
+    subtitle: null,
+    features: ['利益の伸び', '事業の中身', '配当の継続性', '財務リスク'] },
+
   // ── SITE TOP PAGE OGP ────────────────────────────────────────────────────
   { file: 'og-site.png', ...P.blue,
     tags: ['公務員投資家', '高配当株', '資産形成'],
