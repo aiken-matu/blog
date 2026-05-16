@@ -132,3 +132,11 @@ SBI証券と組み合わせることで、投資のお金の流れがシンプ�
 *「仕組みを作ったら考えない」——投資もお金の管理も、結局これが一番長続きするやり方だと思っています。*
 
 楽天銀行との使い分けについてはこちら → [楽天銀行を給与受取口座にした理由——投資と生活費が自動で回る仕組みの作り方](/blog/rakuten-bank-guide/)
+
+---
+
+保険や家計の見直しを考えているなら、無料のFP相談を活用してみてください。オンラインで気軽に相談できます。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" rel="nofollow noreferrer" target="_blank">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260516561963&wid=001&eno=01&mid=s00000027294001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" alt="">

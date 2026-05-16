@@ -187,6 +187,12 @@ category: "投資の始め方"
 
 焦らず、自分のペースで見つけていきましょう。
 
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
+
 ### 関連記事
 
 - [高配当株は利回りだけ見てはダメ？初心者が最初に知るべき5つの基本](/blog/high-dividend-basics-beginner/)

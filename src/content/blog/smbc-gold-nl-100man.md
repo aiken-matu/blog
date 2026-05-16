@@ -169,3 +169,11 @@ NLゴールドに乗り換えたあとも、楽天カードは手放していま
 *投資も節税もクレカ戦略も、「仕組みを作ったら放置」が自分には合っています。毎年1月にアプリを開くだけで1万ポイントが届く——地味だけど、これが一番長続きする方法です。*
 
 毎年10,000ポイント確実にもらう方法はこちら → [毎年10,000ポイント確実にもらう方法——三井住友ゴールドカードNL・公務員の場合](/blog/smbc-gold-nl-10000points/)
+
+---
+
+保険や家計の見直しを考えているなら、無料のFP相談を活用してみてください。オンラインで気軽に相談できます。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" rel="nofollow noreferrer" target="_blank">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260516561963&wid=001&eno=01&mid=s00000027294001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" alt="">

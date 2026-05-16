@@ -143,3 +143,9 @@ NISAは年間360万円（つみたて120万円＋成長240万円）まで使え�
 *NISAとiDeCoは「どちらか」ではなく「どの順番で」の話です。節税できる制度を先に使い切る——それが公務員の合理的な答えだと思っています。*
 
 松井証券iDeCoの詳細はこちら → [松井証券iDeCoの特徴と申込み手順——公務員におすすめの理由](/blog/matsui-ideco-guide/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">

@@ -422,6 +422,12 @@ EPS（1株利益）も大きく伸びており、
 
 ---
 
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
+
 ### 関連記事
 
 - [【2026年版】高配当株おすすめ銘柄（初心者向け）｜失敗しない選び方と分散のコツを丁寧に解説](/blog/high-dividend-recommended-stocks/)

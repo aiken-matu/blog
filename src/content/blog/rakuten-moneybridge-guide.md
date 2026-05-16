@@ -129,6 +129,12 @@ category: "お金の管理"
 
 ※リンクは後日設置予定
 
+---
+
+楽天経済圏を活用するなら、まず楽天カードの発行がおすすめです。ポイント還元率が高く、楽天証券との相性も抜群です。
+
+<a href="https://hb.afl.rakuten.co.jp/hsc/5329f954.5cf286bc.5329f607.bc12a33f/?link_type=text&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJ0ZXh0IiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDEzLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow noreferrer" style="word-wrap:break-word;">クレジットカード選ぶなら楽天カード！</a>
+
 ### 関連記事
 
 → [高配当株に「買い時の正解」はない——それでも私が買い続ける3つの理由](/blog/high-dividend-buy-timing/)

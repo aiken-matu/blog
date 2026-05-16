@@ -142,3 +142,10 @@ iDeCoとNISAどちらを先にやるかはこちら → [iDeCoとNISAどちら�
 ---
 
 *8年前の自分が完璧な選択をしていたら、もう少しリターンが良かったかもしれません。でも、完璧でなくても始めて続けたから、今この数字があります。それで十分だと思っています。*
+
+---
+
+iDeCoを始めるなら、手数料が業界最安水準の松井証券がおすすめです。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B1THS+7VECQA+3XCC+BXIYQ" rel="nofollow noreferrer" target="_blank">松井証券ではじめるiDeCo</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B1THS+7VECQA+3XCC+BXIYQ" alt="">

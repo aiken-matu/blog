@@ -217,3 +217,9 @@ category: "高配当株・配当投資"
 「決算が良ければ株価が上がる」は必ずしも正しくありません。市場は常に将来・リスク・効率を織り込んで動きます。
 
 投資マインドをさらに深めたい方へ → [投資を続けるのがしんどいと感じたとき——それでも続けてきた理由](/blog/investment-mindset-continue/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
