@@ -117,3 +117,9 @@ GWは、保有銘柄の現状利回りをじっくり確認しながら、**「�
 実際の銘柄分析の例はこちら → [東ソーは減配するのか——業績から見えた3つのリスクを正直に書く](/blog/tosoh-dividend-risk-analysis/)
 
 ポートフォリオ全体の設計についてはこちら → [100銘柄以上持つ理由——分散投資の本質](/blog/portfolio-design/)
+
+---
+
+投資を続けるうえで不安を感じたときは、一度プロに相談して整理してみるのもひとつの手です。オンラインで無料相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">

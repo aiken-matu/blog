@@ -117,6 +117,12 @@ category: "投資マインド・公務員"
 
 ---
 
+---
+
+投資を続けるうえで不安を感じたときは、一度プロに相談して整理してみるのもひとつの手です。オンラインで無料相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
+
 ### 関連記事
 
 → [投資を続けるのがしんどいと感じたとき——それでも続けてきた理由](/blog/investment-mindset-continue/)
