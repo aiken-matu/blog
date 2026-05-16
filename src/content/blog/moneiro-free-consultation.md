@@ -212,7 +212,7 @@ SNSでは、どうしても「成功例」が目立ちます。
 
 マネイロでは、NISAや高配当株・資産運用について無料でオンライン相談できます。投資を始める前の「整理」に使ってみてください。
 
-<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" attributionsrc>無料で資産運用を相談する（マネイロ）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank" attributionsrc>無料で資産運用を相談する（マネイロ）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
 
 ---
 
