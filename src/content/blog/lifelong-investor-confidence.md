@@ -4,6 +4,7 @@ description: "投資を10年続けて一番変わったのは、未来への向�
 pubDate: '2026-04-28'
 heroImage: '../../assets/lifelong-investor-confidence.png'
 slug: "lifelong-investor-confidence"
+category: "投資マインド・公務員"
 ---
 
 ## はじめに：投資を続けた先に何が変わるのか

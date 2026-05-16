@@ -4,6 +4,7 @@ description: "NISAの成長投資枠はインデックスか高配当株か。�
 pubDate: 2026-05-04
 heroImage: ../../assets/nisa-growth-dividend-stocks.png
 slug: "nisa-growth-dividend-stocks"
+category: "投資の始め方"
 ---
 
 「NISAの成長投資枠、インデックスで埋めるべきか？それとも高配当株か？」

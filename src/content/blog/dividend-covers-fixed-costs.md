@@ -4,6 +4,7 @@ description: '最初の配当金は年間1万円。月1000円で通信費が賄�
 pubDate: '2026-04-26'
 slug: dividend-covers-fixed-costs
 heroImage: '../../assets/dividend-covers-fixed-costs.png'
+category: "高配当株・配当投資"
 ---
 
 *— 月1000円から始まった、小さな安心の積み上げ —*

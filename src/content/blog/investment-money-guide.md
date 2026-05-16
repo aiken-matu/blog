@@ -4,6 +4,7 @@ description: "投資に回していいお金はいくら？生活防衛費の目
 pubDate: 2026-05-04
 heroImage: ../../assets/investment-money-guide.png
 slug: "investment-money-guide"
+category: "投資の始め方"
 ---
 
 ## はじめに｜「いくらから投資していいの？」という不安

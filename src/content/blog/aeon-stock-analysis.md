@@ -4,6 +4,7 @@ description: '2026年2月期に過去最高益を更新したイオン。それ�
 pubDate: '2026-04-27'
 heroImage: '../../assets/aeon-stock-analysis.png'
 slug: 'aeon-stock-analysis'
+category: "高配当株・配当投資"
 ---
 
 「好決算なのに、なぜ株価は下がるのか？」

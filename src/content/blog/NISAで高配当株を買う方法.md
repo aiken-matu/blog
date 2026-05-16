@@ -4,6 +4,7 @@ description: '資産も増やす。でも「使えるお金」も増やす。イ
 pubDate: '2026-04-22'
 slug: how-to-buy-dividend-stocks-with-nisa
 heroImage: '../../assets/how-to-buy-high-dividend-stocks-with-nisa.png'
+category: "高配当株・配当投資"
 ---
 
 *— 資産も増やす。でも「使えるお金」も増やす —*

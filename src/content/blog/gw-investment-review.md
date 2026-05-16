@@ -4,6 +4,7 @@ description: '相場が動かないGWは、じっくり考える絶好の機会�
 pubDate: '2026-04-27'
 slug: gw-investment-review
 heroImage: '../../assets/gw-investment-review.png'
+category: "投資マインド・公務員"
 ---
 
 *— 準備した人だけが、チャンスで迷わず動ける —*

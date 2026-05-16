@@ -4,6 +4,7 @@ description: '一見安定した増配銘柄に見える東ソー。でもEPS・
 pubDate: '2026-04-26'
 slug: tosoh-dividend-risk-analysis
 heroImage: '../../assets/tosoh-dividend-risk-analysis.png'
+category: "高配当株・配当投資"
 ---
 
 *— 「大丈夫」と思い込む前に、一度数字を見てほしい —*

@@ -4,6 +4,7 @@ description: "東京海上HDの業績・配当・財務・将来性を分析。�
 pubDate: 2026-05-12
 heroImage: ../../assets/tokio-marine-analysis.png
 slug: "tokio-marine-analysis"
+category: "高配当株・配当投資"
 ---
 
 📝 **開示**

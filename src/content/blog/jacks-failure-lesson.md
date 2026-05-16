@@ -4,6 +4,7 @@ description: "ジャックス株で40%暴落を経験した公務員投資家ト
 pubDate: 2026-05-16
 heroImage: '../../assets/jacks-failure-lesson.png'
 slug: "jacks-failure-lesson"
+category: "お金の管理"
 ---
 
 ## はじめに｜「高配当なら安心」と思っていた

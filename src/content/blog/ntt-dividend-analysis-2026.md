@@ -4,6 +4,7 @@ description: "NTT株を買うべきか迷っている方へ。2026年5月決算�
 pubDate: 2026-05-16
 heroImage: ../../assets/ntt-dividend-analysis-2026.png
 slug: "ntt-dividend-analysis-2026"
+category: "高配当株・配当投資"
 ---
 
 📅 この記事は2026年5月1日に書いています。

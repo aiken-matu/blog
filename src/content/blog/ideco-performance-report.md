@@ -3,6 +3,7 @@ title: 'iDeCo運用実績を公開——8年間で投資額が2倍以上にな�
 description: '2018年スタートのiDeCoが8年で約2.2倍に。投資累計128万円が時価278万円へ。銘柄選定の失敗と変遷も含めて、正直にすべて公開します。'
 pubDate: '2026-04-26'
 heroImage: '../../assets/ideco-performance-report.png'
+category: "投資の始め方"
 ---
 
 *— 最初から完璧じゃなくていい。続けることが、全てだった —*

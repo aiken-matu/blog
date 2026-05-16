@@ -4,6 +4,7 @@ description: "オリエンタルランド株が64%下落した本当の理由と
 pubDate: 2026-05-16
 heroImage: ../../assets/oriental-land-stock-analysis.png
 slug: "oriental-land-stock-analysis"
+category: "高配当株・配当投資"
 ---
 
 ### この記事を書いた理由

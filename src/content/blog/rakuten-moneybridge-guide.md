@@ -4,6 +4,7 @@ description: "マネーブリッジを設定すると普通預金金利が年0.1
 pubDate: '2026-04-29'
 heroImage: '../../assets/rakuten-moneybridge-guide.png'
 slug: "rakuten-moneybridge-guide"
+category: "お金の管理"
 ---
 
 ## はじめに｜投資を始める前に「やるべき設定」がある

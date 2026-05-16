@@ -4,6 +4,7 @@ description: "高配当株で失敗しないために、JTを基準にダメな�
 pubDate: 2026-05-04
 heroImage: ../../assets/bad-dividend-stock-guide.png
 slug: "bad-dividend-stock-guide"
+category: "高配当株・配当投資"
 ---
 
 ## はじめに｜「高配当＝安心」ではありません

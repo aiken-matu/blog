@@ -4,6 +4,7 @@ description: "高配当株で失敗する人の多くは利回りだけで選ん
 pubDate: 2026-05-04
 heroImage: ../../assets/bad-high-dividend-stocks.png
 slug: "bad-high-dividend-stocks"
+category: "高配当株・配当投資"
 ---
 
 「高配当株って利回りが高いほどいいんじゃないの？」

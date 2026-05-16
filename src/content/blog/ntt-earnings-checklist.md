@@ -4,6 +4,7 @@ description: "NTT決算発表前に押さえておきたいチェックポイン
 pubDate: 2026-05-05
 heroImage: ../../assets/ntt-earnings-checklist.png
 slug: "ntt-earnings-checklist"
+category: "高配当株・配当投資"
 ---
 
 NTTの決算発表が近づいています。

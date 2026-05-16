@@ -4,6 +4,7 @@ description: "投資を始める前の貯金はいくら必要？生活防衛費
 pubDate: 2026-05-03
 heroImage: ../../assets/investment-savings-guide.png
 slug: "investment-savings-guide"
+category: "投資の始め方"
 ---
 
 私自身も、投資を始める前は不安でした。

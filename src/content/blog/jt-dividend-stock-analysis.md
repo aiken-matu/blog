@@ -4,6 +4,7 @@ description: "日本たばこ産業（JT）の業績・配当・財務・理論�
 pubDate: 2026-05-04
 heroImage: ../../assets/jt-dividend-stock-analysis.png
 slug: "jt-dividend-stock-analysis"
+category: "高配当株・配当投資"
 ---
 
 📝 **この記事を書いた理由**

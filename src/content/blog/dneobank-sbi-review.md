@@ -3,6 +3,7 @@ title: 'dNEOBANK（住信SBIネット銀行）をSBI証券と一緒に使う理�
 description: 'SBI証券との連携・目的別口座・アプリでATM。dNEOBANKを実際に使っている公務員が、便利な使い方を正直に紹介します。'
 pubDate: '2026-04-25'
 heroImage: '../../assets/dneobank-sbi-review.png'
+category: "お金の管理"
 ---
 
 *— SBI証券と組み合わせると、投資がシンプルになりました —*

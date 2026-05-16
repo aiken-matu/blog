@@ -4,6 +4,7 @@ description: "投資したいけど毎月余裕がない人へ。公務員投資
 pubDate: 2026-05-16
 heroImage: ../../assets/insurance-review-investment-fund.png
 slug: "insurance-review-investment-fund"
+category: "投資の始め方"
 ---
 
 ## はじめに｜「投資したいけど、毎月そんな余裕がない」

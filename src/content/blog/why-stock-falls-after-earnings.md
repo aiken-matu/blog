@@ -4,6 +4,7 @@ description: "好決算なのに株価が下落する理由を仕組みから解
 pubDate: '2026-04-29'
 heroImage: '../../assets/why-stock-falls-after-earnings.png'
 slug: "why-stock-falls-after-earnings"
+category: "投資マインド・公務員"
 ---
 
 「決算が良かったのに、なぜか株価が下がる」

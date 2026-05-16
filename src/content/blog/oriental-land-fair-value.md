@@ -4,6 +4,7 @@ description: "オリエンタルランド株の理論株価をPERで徹底計算
 pubDate: 2026-05-16
 heroImage: ../../assets/oriental-land-fair-value.png
 slug: "oriental-land-fair-value"
+category: "高配当株・配当投資"
 ---
 
 2024年1月に5,765円の高値をつけたオリエンタルランド株は、2026年4月末には約2,188円まで下落しました。

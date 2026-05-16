@@ -4,6 +4,7 @@ description: '2026年4月27日、日経平均が初めて6万円を突破。で�
 pubDate: '2026-04-28'
 heroImage: '../../assets/nikkei-60000-my-thoughts.png'
 slug: 'nikkei-60000-my-thoughts'
+category: "投資マインド・公務員"
 ---
 
 > 📅 この記事は2026年4月28日に書いています。

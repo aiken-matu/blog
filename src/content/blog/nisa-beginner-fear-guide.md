@@ -4,6 +4,7 @@ description: "NISAを始めたいけど怖い。その不安の正体は「間�
 pubDate: 2026-05-02
 heroImage: ../../assets/nisa-beginner-fear-guide.png
 slug: "nisa-beginner-fear-guide"
+category: "投資の始め方"
 ---
 
 「投資を始めたい。でも、損するのが怖い」

@@ -4,6 +4,7 @@ description: "GWを消費で終わらせていませんか？固定費見直し�
 pubDate: 2026-05-01
 heroImage: ../../assets/investor-gw-guide.png
 slug: "investor-gw-guide"
+category: "投資マインド・公務員"
 ---
 
 ## はじめに｜GWの使い方で、1年後の資産は変わる

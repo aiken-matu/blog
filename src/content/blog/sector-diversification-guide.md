@@ -4,6 +4,7 @@ description: "高配当株投資でセクター分散が重要な理由を初心
 pubDate: 2026-05-07
 heroImage: ../../assets/sector-diversification-guide.png
 slug: "sector-diversification-guide"
+category: "投資の始め方"
 ---
 
 高配当株投資を始めると、つい「利回りの高い銘柄」に目が向きます。

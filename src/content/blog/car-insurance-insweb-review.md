@@ -4,6 +4,7 @@ description: "インズウェブの自動車保険一括見積もりを使って
 pubDate: '2026-04-29'
 heroImage: '../../assets/car-insurance-insweb-review.png'
 slug: "car-insurance-insweb-review"
+category: "お金の管理"
 ---
 
 「自動車保険、見直したいけど面倒そう」

@@ -4,6 +4,7 @@ description: "配当利回り・利益・配当性向・借金・増配の5つ�
 pubDate: 2026-05-03
 heroImage: ../../assets/high-dividend-basics-beginner.png
 slug: "high-dividend-basics-beginner"
+category: "高配当株・配当投資"
 ---
 
 ## はじめに｜「利回りが高い＝お得」と思っていませんか？

@@ -4,6 +4,7 @@ description: '株高でも高配当株を買い続ける理由と、公務員投
 pubDate: '2026-04-27'
 heroImage: '../../assets/high-dividend-buy-timing.png'
 slug: 'high-dividend-buy-timing'
+category: "高配当株・配当投資"
 ---
 
 *— 正解を待っていたら、配当金は一円も増えない —*

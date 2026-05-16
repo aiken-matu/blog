@@ -4,6 +4,7 @@ description: "三菱商事株が下落している本当の理由と、2026年�
 pubDate: 2026-05-16
 heroImage: '../../assets/mitsubishi-corp-dividend-analysis.png'
 slug: "mitsubishi-corp-dividend-analysis"
+category: "高配当株・配当投資"
 ---
 
 三菱商事の株価が、ここにきて下落トレンドに入っています。

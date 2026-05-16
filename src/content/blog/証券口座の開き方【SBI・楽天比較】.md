@@ -4,6 +4,7 @@ description: '迷わず選んで、すぐに始めるために。実際に両方
 pubDate: '2026-04-21'
 slug: how-to-open-brokerage-account-sbi-rakuten
 heroImage: '../../assets/how-to-open-brokerage-account-sbi-rakuten.png'
+category: "投資の始め方"
 ---
 
 *— 迷わず選んで、すぐに始めるために —*

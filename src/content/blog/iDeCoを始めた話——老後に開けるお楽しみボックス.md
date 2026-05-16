@@ -4,6 +4,7 @@ description: '2018年にiDeCoをスタートした話。節税効果・少額で
 slug: how-i-started-ideco
 heroImage: '../../assets/ideco-started.png'
 pubDate: '2026-04-22'
+category: "投資の始め方"
 ---
 
 *— 今は使えないからこそ、未来に残る —*

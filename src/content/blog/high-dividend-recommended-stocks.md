@@ -4,6 +4,7 @@ description: "初心者向けに高配当株のおすすめ銘柄5選を紹介�
 pubDate: 2026-05-04
 heroImage: ../../assets/high-dividend-recommended-stocks.png
 slug: "high-dividend-recommended-stocks"
+category: "高配当株・配当投資"
 ---
 
 📝 **開示**

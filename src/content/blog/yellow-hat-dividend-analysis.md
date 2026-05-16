@@ -4,6 +4,7 @@ description: 'イエローハットの業績・財務・キャッシュフロー
 pubDate: '2026-04-27'
 heroImage: '../../assets/yellow-hat-dividend-analysis.png'
 slug: 'yellow-hat-dividend-analysis'
+category: "高配当株・配当投資"
 ---
 
 高配当株投資を考えるうえで重要なのは、「配当の高さ」ではなく配当の持続性です。

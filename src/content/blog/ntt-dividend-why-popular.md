@@ -4,6 +4,7 @@ description: "2026年5月8日のNTT決算を踏まえ、なぜNTTが高配当株
 pubDate: 2026-05-08
 heroImage: ../../assets/ntt-dividend-why-popular.png
 slug: "ntt-dividend-why-popular"
+category: "高配当株・配当投資"
 ---
 
 「高配当株に興味はあるけれど、どの銘柄を選べばいいかわからない」

@@ -4,6 +4,7 @@ description: '公務員はiDeCoを先に始めるべき。掛金が全額所得�
 pubDate: '2026-04-25'
 slug: ideco-vs-nisa
 heroImage: '../../assets/ideco-vs-nisa-koumuin.png'
+category: "投資の始め方"
 ---
 
 *— 節税できる制度を先に使い切る。それが公務員の合理的な答え —*

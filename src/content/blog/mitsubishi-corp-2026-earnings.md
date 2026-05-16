@@ -4,6 +4,7 @@ description: "三菱商事2026年3月期決算を徹底分析。減益の中身�
 pubDate: 2026-05-01
 heroImage: ../../assets/mitsubishi-corp-2026-earnings.png
 slug: "mitsubishi-corp-2026-earnings"
+category: "高配当株・配当投資"
 ---
 
 ## はじめに

@@ -4,6 +4,7 @@ description: "三菱HCキャピタルの業績・配当推移・財務・将来�
 pubDate: 2026-05-08
 heroImage: ../../assets/mitsubishi-hc-capital-analysis.png
 slug: "mitsubishi-hc-capital-analysis"
+category: "高配当株・配当投資"
 ---
 
 📝 **開示**

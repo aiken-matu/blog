@@ -4,6 +4,7 @@ description: '積水ハウスの安定配当を支えるのは「今の利益」
 pubDate: '2026-04-26'
 slug: sekisui-house-dividend-analysis
 heroImage: '../../assets/sekisui-house-dividend-analysis.png'
+category: "高配当株・配当投資"
 ---
 
 *— 「安定している」には、必ず理由がある —*

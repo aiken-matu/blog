@@ -4,6 +4,7 @@ description: '松井証券iDeCoの強みと6ステップの申込み手順を解
 pubDate: '2026-04-25'
 slug: matsui-ideco-guide
 heroImage: '../../assets/matsui-ideco-guide.png'
+category: "投資の始め方"
 ---
 
 *— 節税しながら老後資金を積み上げる、公務員の合理的な選択 —*

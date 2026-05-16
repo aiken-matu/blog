@@ -4,6 +4,7 @@ description: '下落相場、体調不良、ライフステージの変化。投
 pubDate: '2026-04-28'
 heroImage: '../../assets/investment-mindset-continue.png'
 slug: 'investment-mindset-continue'
+category: "投資マインド・公務員"
 ---
 
 *— 続けることが、一番の戦略 —*

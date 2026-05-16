@@ -4,6 +4,7 @@ description: '減配は突然起きるように見えて、実はほぼ全部予
 pubDate: '2026-04-26'
 slug: dividend-cut-patterns
 heroImage: '../../assets/dividend-cut-patterns.png'
+category: "高配当株・配当投資"
 ---
 
 *— 「予兆はあった」と、あとで必ず気づく —*

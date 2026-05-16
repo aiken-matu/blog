@@ -4,6 +4,7 @@ description: "KDDIの2026年3月期決算を分析。増収増益の一方でBIG
 pubDate: 2026-05-15
 heroImage: ../../assets/kddi-dividend-analysis.png
 slug: "kddi-dividend-analysis"
+category: "高配当株・配当投資"
 ---
 
 📝 **開示**

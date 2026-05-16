@@ -4,6 +4,7 @@ description: '相場が落ち着いたら始めよう。貯金が増えたら始
 pubDate: '2026-04-26'
 slug: 'investment-start-now'
 heroImage: '../../assets/index-fund-start-guide.png'
+category: "投資の始め方"
 ---
 
 *— できることを今日やる。それだけが、始まりをつくる —*

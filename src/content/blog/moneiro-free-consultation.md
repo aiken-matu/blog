@@ -4,6 +4,7 @@ description: "NISA・高配当株・インデックス投資…自分に合う�
 pubDate: 2026-05-16
 heroImage: ../../assets/moneiro-free-consultation.png
 slug: "moneiro-free-consultation"
+category: "投資の始め方"
 ---
 
 ## はじめに｜「自分に合う投資の形」がわからなくなった
