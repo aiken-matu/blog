@@ -196,6 +196,14 @@ slug: "oriental-land-fair-value"
 
 ---
 
+投資判断に迷ったとき、プロのFPに無料で相談できる環境を整えておくのもひとつの選択肢です。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260516561963&wid=001&eno=01&mid=s00000027294001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" alt="">
+
+---
+
 ### 関連記事
 
 - [【2026年最新】オリエンタルランドは買い時？株価64%下落の理由と今後の見通しを徹底分析](/blog/oriental-land-stock-analysis/)

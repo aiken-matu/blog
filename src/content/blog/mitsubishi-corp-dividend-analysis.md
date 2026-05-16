@@ -211,6 +211,14 @@ slug: "mitsubishi-corp-dividend-analysis"
 
 ---
 
+投資資金を作るには、まず固定費・保険の見直しが近道です。無料のFP相談を活用してみてください。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260516561963&wid=001&eno=01&mid=s00000027294001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" alt="">
+
+---
+
 ### この記事を読んで投資を始めたい方へ
 
 高配当株投資をはじめるなら、まず証券口座の開設が必要です。
