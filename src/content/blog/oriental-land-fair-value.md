@@ -1,6 +1,6 @@
 ---
-title: "【2026年版】オリエンタルランドの理論株価はいくら？PERから見る買い時を徹底解説"
-description: "64%下落したオリエンタルランドの適正株価をPERと優待利回りから計算。1,700円〜2,800円のレンジと具体的な買い目線を整理します。"
+title: "【2026年版】OLC株の適正価格はいくら？PERで計算したら\"買える水準\"が見えてきた"
+description: "オリエンタルランド株の理論株価をPERで徹底計算。2026年最新データをもとに、高配当投資家の視点で「買える水準」を具体的に解説します。"
 pubDate: 2026-05-02
 heroImage: ../../assets/oriental-land-fair-value.png
 slug: "oriental-land-fair-value"

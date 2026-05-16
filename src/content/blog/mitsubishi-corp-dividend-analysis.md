@@ -1,6 +1,6 @@
 ---
-title: "【決算直前】三菱商事は買いか？株価下落の理由と「次に動くシナリオ」を徹底解説"
-description: "2026年5月1日決算発表直前の三菱商事を徹底分析。減益の中身・キャッシュフロー・3つのシナリオから投資判断の軸を整理します。"
+title: "【2026年決算】三菱商事は今が買い場か？下落の本当の理由と次の動きを読む"
+description: "三菱商事株が下落している本当の理由と、2026年決算を踏まえた今後の見通しを解説。買い場かどうか、データをもとに冷静に判断します。"
 pubDate: '2026-04-29'
 heroImage: '../../assets/mitsubishi-corp-dividend-analysis.png'
 slug: "mitsubishi-corp-dividend-analysis"
