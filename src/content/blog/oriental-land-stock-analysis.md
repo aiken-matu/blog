@@ -178,7 +178,7 @@ slug: "oriental-land-stock-analysis"
 
 株価下落時こそ、家計全体を見直すチャンスです。無料FP相談で投資余力を確認してみてください。
 
-<a href="https://px.a8.net/svt/ejp?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" rel="nofollow">
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" rel="nofollow noreferrer" target="_blank">
 <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260516561963&wid=001&eno=01&mid=s00000027294001003000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" alt="">
 
