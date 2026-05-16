@@ -85,6 +85,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	.prose {
 		width: 100%;
 		color: rgb(var(--gray-dark));
+		line-height: 1.9;
 	}
 
 	.article-header {
@@ -155,8 +156,69 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		margin: 1.5em 0;
 	}
 
+	/* 強調引用ボックス */
 	.prose :global(blockquote) {
-		margin: 1.5em 0;
+		background: #fafafa;
+		border-left: 4px solid #6366f1;
+		padding: 1em 1.5em;
+		border-radius: 0 8px 8px 0;
+		margin: 2em 0;
+		font-style: normal;
+		color: #374151;
+	}
+
+	/* リード文ボックス */
+	.prose :global(.lead-box) {
+		background: #f0f9ff;
+		border-left: 4px solid #0ea5e9;
+		padding: 1.2em 1.5em;
+		border-radius: 0 8px 8px 0;
+		margin: 2em 0;
+		font-size: 1.05em;
+		line-height: 1.8;
+	}
+
+	/* 重要ポイントボックス */
+	.prose :global(.point-box) {
+		background: #f0fdf4;
+		border: 1.5px solid #86efac;
+		padding: 1.2em 1.5em;
+		border-radius: 8px;
+		margin: 2em 0;
+	}
+
+	/* CTAボックス */
+	.prose :global(.cta-box) {
+		background: #fffbeb;
+		border: 1.5px solid #fcd34d;
+		padding: 1.5em;
+		border-radius: 8px;
+		margin: 2.5em 0;
+		text-align: center;
+	}
+
+	/* 段落の余白・行間 */
+	.prose :global(p) {
+		margin-bottom: 1.6em;
+		line-height: 1.9;
+	}
+
+	/* 箇条書きの余白改善 */
+	.prose :global(ul) {
+		margin: 1.2em 0;
+		padding-left: 1.5em;
+	}
+
+	.prose :global(ul li) {
+		margin-bottom: 0.6em;
+		line-height: 1.8;
+	}
+
+	/* セクション区切り */
+	.prose :global(hr) {
+		border: none;
+		border-top: 2px solid #e5e7eb;
+		margin: 3em 0;
 	}
 
 	@media (max-width: 720px) {
