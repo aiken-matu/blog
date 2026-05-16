@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
@@ -9,7 +9,18 @@ import { SITE_TITLE } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, slug, category } = Astro.props as CollectionEntry<'blog'>['data'] & { slug?: string; category?: string };
+
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter(p =>
+    (p.data.slug ?? p.id) !== (slug ?? title) &&
+    (p.data as any).category === category
+  )
+  .sort((a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  )
+  .slice(0, 3);
 ---
 
 <html lang="ja">
@@ -52,6 +63,27 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<slot />
 				</div>
 			</article>
+
+			{relatedPosts.length > 0 && (
+				<div class="related-posts">
+					<h3>関連記事</h3>
+					<div class="related-grid">
+						{relatedPosts.map(post => (
+							<a href={`/blog/${post.data.slug ?? post.id}/`} class="related-card">
+								{post.data.heroImage && (
+									<img src={post.data.heroImage.src} alt={post.data.title} />
+								)}
+								<div class="related-card-body">
+									<p class="related-date">
+										{new Date(post.data.pubDate).toLocaleDateString('ja-JP')}
+									</p>
+									<p class="related-title">{post.data.title}</p>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>
+			)}
 		</main>
 		<Footer />
 	</body>
@@ -219,6 +251,69 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		border: none;
 		border-top: 2px solid #e5e7eb;
 		margin: 3em 0;
+	}
+
+	/* 関連記事セクション */
+	.related-posts {
+		margin-top: 4em;
+		padding-top: 2em;
+		border-top: 2px solid #e5e7eb;
+	}
+
+	.related-posts h3 {
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-bottom: 1.2em;
+		color: #1f2937;
+	}
+
+	.related-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.2em;
+	}
+
+	.related-card {
+		display: block;
+		border: 1px solid #e5e7eb;
+		border-radius: 8px;
+		overflow: hidden;
+		text-decoration: none;
+		color: inherit;
+		transition: box-shadow 0.2s;
+	}
+
+	.related-card:hover {
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	}
+
+	.related-card img {
+		width: 100%;
+		height: 120px;
+		object-fit: cover;
+	}
+
+	.related-card-body {
+		padding: 0.8em;
+	}
+
+	.related-date {
+		font-size: 0.8em;
+		color: #6b7280;
+		margin-bottom: 0.4em;
+	}
+
+	.related-title {
+		font-size: 0.9em;
+		font-weight: bold;
+		line-height: 1.5;
+		color: #1f2937;
+	}
+
+	@media (max-width: 640px) {
+		.related-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	@media (max-width: 720px) {
