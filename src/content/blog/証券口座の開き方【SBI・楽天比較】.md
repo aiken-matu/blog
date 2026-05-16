@@ -117,3 +117,9 @@ SBI証券の「S株」は、国内上場株式のほぼすべてに対応して�
 次の記事では、その具体的な始め方について丁寧に解説していきます。
 
 公務員の給料と投資の組み合わせ方はこちら → [公務員の給料と投資の組み合わせ方——仕組み化でほったらかし](/blog/civil-servant-salary-investing/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">

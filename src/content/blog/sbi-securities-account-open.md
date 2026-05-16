@@ -140,3 +140,9 @@ NISA口座も含めて同じ画面で管理できるので、資産全体を把�
 *100銘柄は目標じゃなかった。気づいたら届いていた、という感じです。コツコツは、確かに積み上がります。*
 
 dNEOBANKとSBI証券の連携についてはこちら → [dNEOBANK（住信SBIネット銀行）をSBI証券と一緒に使う理由](/blog/dneobank-sbi-review/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">

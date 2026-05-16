@@ -173,3 +173,9 @@ EPSが安定して推移するということは、「配当を出し続ける�
 減配パターンの全体像はこちら → [高配当株で減配する3つのパターン——私が実際に保有して気づいたこと](/blog/dividend-cut-patterns/)
 
 銘柄選定の基本的な考え方はこちら → [高配当株の銘柄選定——愛せる企業に出会うために](/blog/high-dividend-stock-selection/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">

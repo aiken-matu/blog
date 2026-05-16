@@ -165,3 +165,9 @@ EPSが下がっている中で、配当性向が上がり続けている。こ�
 銘柄選定の基本的な考え方はこちら → [高配当株の銘柄選定——愛せる企業に出会うために](/blog/high-dividend-stock-selection/)
 
 ポートフォリオ全体の設計についてはこちら → [100銘柄以上持つ理由——分散投資の本質](/blog/portfolio-design/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">

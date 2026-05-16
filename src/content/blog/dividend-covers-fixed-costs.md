@@ -131,3 +131,9 @@ category: "高配当株・配当投資"
 投資資金の作り方はこちら → [月6万円の投資資金を作った方法——保険と通信費を見直すだけでいい](/blog/investment-fund-creation/)
 
 高配当株投資の始め方はこちら → [インデックス投資だけでは物足りなくなったら——高配当株投資の始め方](/blog/dividend-stock-first-step/)
+
+---
+
+投資判断に迷ったときは、資産運用のプロに無料で相談してみてください。オンラインで気軽に相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で資産運用を相談する（おかねと暮らしの相談窓口）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568038&p_id=7356&pc_id=21162&pl_id=92571" width="1" height="1" style="border:none;" loading="lazy">
