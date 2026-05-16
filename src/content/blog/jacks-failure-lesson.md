@@ -1,7 +1,7 @@
 ---
 title: "【実体験】高配当株で40%暴落した私が学んだ「やってはいけない買い方」"
 description: "ジャックス株で40%暴落を経験した公務員投資家トニーの実体験。失敗から学んだ高配当株の「やってはいけない買い方」を正直に語ります。"
-pubDate: '2026-04-29'
+pubDate: 2026-05-16
 heroImage: '../../assets/jacks-failure-lesson.png'
 slug: "jacks-failure-lesson"
 ---

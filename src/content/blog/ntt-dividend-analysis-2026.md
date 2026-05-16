@@ -1,7 +1,7 @@
 ---
 title: "【2026年5月】NTT株は今すぐ買っていいか？配当3%超・増配継続の根拠と唯一のリスク"
 description: "NTT株を買うべきか迷っている方へ。2026年5月決算を踏まえ、配当利回り・増配の根拠・唯一のリスクを公務員投資家トニーが徹底解説します。"
-pubDate: 2026-05-01
+pubDate: 2026-05-16
 heroImage: ../../assets/ntt-dividend-analysis-2026.png
 slug: "ntt-dividend-analysis-2026"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "【2026年最新】OLC株64%下落はまだ続く？底値の根拠と反発シナリオを徹底検証"
 description: "オリエンタルランド株が64%下落した本当の理由と、今後の反発シナリオを徹底検証。底値圏かどうか、データで冷静に判断します。"
-pubDate: 2026-05-02
+pubDate: 2026-05-16
 heroImage: ../../assets/oriental-land-stock-analysis.png
 slug: "oriental-land-stock-analysis"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "【2026年版】OLC株の適正価格はいくら？PERで計算したら\"買える水準\"が見えてきた"
 description: "オリエンタルランド株の理論株価をPERで徹底計算。2026年最新データをもとに、高配当投資家の視点で「買える水準」を具体的に解説します。"
-pubDate: 2026-05-02
+pubDate: 2026-05-16
 heroImage: ../../assets/oriental-land-fair-value.png
 slug: "oriental-land-fair-value"
 ---
