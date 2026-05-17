@@ -11,39 +11,20 @@ import OgSiteImage from '../assets/og-site.png';
 const allPosts = (await getCollection('blog'))
 	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id));
 
-// 最新記事 6件
+// 最新記事 9件（pubDate降順）
 const latestPosts = allPosts
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 6);
+	.slice(0, 9);
 
-// おすすめ記事をスラグで取得
-const getPost = (slug: string) => allPosts.find(p => (p.data.slug ?? p.id) === slug);
+// カテゴリ一覧（記事数を自動集計）
+const countByCategory = (cat: string) =>
+	allPosts.filter(p => (p.data as any).category === cat).length;
 
-const recommended = [
-	{
-		label: '高配当株・配当投資',
-		posts: [
-			getPost('bad-high-dividend-stocks'),
-			getPost('bad-dividend-stock-guide'),
-			getPost('oriental-land-stock-analysis'),
-		],
-	},
-	{
-		label: '投資の始め方',
-		posts: [
-			getPost('nisa-beginner-fear-guide'),
-			getPost('investment-savings-guide'),
-			getPost('nisa-growth-dividend-stocks'),
-		],
-	},
-	{
-		label: '投資マインド・公務員',
-		posts: [
-			getPost('lifelong-investor-confidence'),
-			getPost('investor-gw-guide'),
-			getPost('why-stock-falls-after-earnings'),
-		],
-	},
+const categories = [
+	{ name: '高配当株・配当投資', slug: 'dividend',  emoji: '📈' },
+	{ name: '投資の始め方',       slug: 'start',     emoji: '🌱' },
+	{ name: 'お金の管理',         slug: 'money',     emoji: '💰' },
+	{ name: '投資マインド・公務員', slug: 'mindset', emoji: '🧠' },
 ];
 ---
 
@@ -88,34 +69,18 @@ const recommended = [
 				<div class="hero-deco" aria-hidden="true"></div>
 			</section>
 
-			<!-- ② カテゴリ別おすすめ記事 -->
-			<section class="recommend">
-				<h2 class="section-title">カテゴリ別おすすめ記事</h2>
-				{recommended.map((cat) => (
-					<div class="rec-category">
-						<h3 class="rec-label">{cat.label}</h3>
-						<div class="rec-grid">
-							{cat.posts.map((post) => post && (
-								<a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
-									{post.data.heroImage && (
-										<div class="card-img-wrap rec-img-wrap">
-											<Image
-												width={480}
-												height={240}
-												src={post.data.heroImage}
-												alt=""
-												style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0;"
-											/>
-										</div>
-									)}
-									<div class="card-body">
-										<h4 class="card-title">{post.data.title}</h4>
-									</div>
-								</a>
-							))}
-						</div>
-					</div>
-				))}
+			<!-- ② カテゴリから探す -->
+			<section class="category-section">
+				<h2 class="section-title">カテゴリから探す</h2>
+				<div class="category-grid">
+					{categories.map((cat) => (
+						<a href={`/category/${cat.slug}/`} class="category-card">
+							<span class="cat-emoji">{cat.emoji}</span>
+							<span class="cat-name">{cat.name}</span>
+							<span class="cat-count">{countByCategory(cat.name)}記事</span>
+						</a>
+					))}
+				</div>
 			</section>
 
 			<!-- ③ 最新記事 -->
@@ -279,35 +244,55 @@ const recommended = [
 		border-bottom: 2px solid #A7F3D0;
 	}
 
-	/* ── おすすめ記事 ──────────────────────────────────────────── */
-	.recommend {
+	/* ── カテゴリから探す ──────────────────────────────────────── */
+	.category-section {
 		margin-bottom: 3em;
 	}
 
-	.rec-category {
-		margin-bottom: 2.2em;
-	}
-
-	.rec-label {
-		font-size: 0.92em;
-		font-weight: 700;
-		color: #1E3A8A;
-		background: #EEF2FF;
-		display: inline-block;
-		padding: 0.3em 0.9em;
-		border-radius: 6px;
-		margin: 0 0 0.9em 0;
-		border-bottom: none;
-	}
-
-	.rec-grid {
+	.category-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 1.2em;
 	}
 
-	.rec-img-wrap {
-		height: 120px !important;
+	.category-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5em;
+		background: #FFFFFF;
+		border: 1.5px solid #E2E8F0;
+		border-radius: 12px;
+		padding: 1.4em 1em;
+		text-decoration: none;
+		color: inherit;
+		transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+		text-align: center;
+	}
+
+	.category-card:hover {
+		box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+		transform: translateY(-2px);
+		border-color: #93C5FD;
+		text-decoration: none;
+	}
+
+	.cat-emoji {
+		font-size: 1.8em;
+		line-height: 1;
+	}
+
+	.cat-name {
+		font-size: 0.88em;
+		font-weight: 700;
+		color: #1E293B;
+		line-height: 1.4;
+	}
+
+	.cat-count {
+		font-size: 0.76em;
+		color: #64748B;
+		font-weight: 500;
 	}
 
 	/* ── 最新記事 ──────────────────────────────────────────────── */
@@ -367,6 +352,10 @@ const recommended = [
 		margin: 0;
 		line-height: 1.5;
 		border-bottom: none;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 
 	.card:hover .card-title { color: #2563EB; }
@@ -406,6 +395,10 @@ const recommended = [
 	/* ── レスポンシブ ──────────────────────────────────────────── */
 	.sp-only { display: none; }
 
+	@media (max-width: 900px) {
+		.category-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
 	@media (max-width: 800px) {
 		.card-grid { grid-template-columns: repeat(2, 1fr); }
 	}
@@ -425,9 +418,7 @@ const recommended = [
 
 		.badge-num { font-size: 0.95em; }
 
-		.rec-grid { grid-template-columns: 1fr; }
-
-		.rec-img-wrap { height: 110px !important; }
+		.category-grid { grid-template-columns: repeat(2, 1fr); }
 
 		.card-grid { grid-template-columns: 1fr; }
 	}
