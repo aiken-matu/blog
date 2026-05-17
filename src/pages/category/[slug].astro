@@ -1,0 +1,264 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const CATEGORY_MAP: Record<string, string> = {
+  dividend: '高配当株・配当投資',
+  start:    '投資の始め方',
+  money:    'お金の管理',
+  mindset:  '投資マインド・公務員',
+};
+
+export async function getStaticPaths() {
+  const allPosts = (await getCollection('blog'))
+    .filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id));
+
+  const slugs = ['dividend', 'start', 'money', 'mindset'] as const;
+  const categoryMap: Record<string, string> = {
+    dividend: '高配当株・配当投資',
+    start:    '投資の始め方',
+    money:    'お金の管理',
+    mindset:  '投資マインド・公務員',
+  };
+
+  return slugs.map(slug => {
+    const categoryName = categoryMap[slug];
+    const posts = allPosts
+      .filter(p => p.data.category === categoryName)
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    return { params: { slug }, props: { posts, categoryName } };
+  });
+}
+
+const { slug } = Astro.params;
+const { posts, categoryName } = Astro.props;
+const pageTitle = `${categoryName}の記事一覧`;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <BaseHead title={`${pageTitle} | 配当日和`} description={`${categoryName}に関する記事一覧。全${posts.length}件。`} />
+  </head>
+  <body>
+    <Header />
+    <main>
+
+      <!-- パンくず -->
+      <nav class="breadcrumb">
+        <a href="/">ホーム</a>
+        <span class="sep">›</span>
+        <span>{categoryName}</span>
+      </nav>
+
+      <!-- ページヘッダー -->
+      <div class="page-header">
+        <h1 class="page-title">{pageTitle}</h1>
+        <p class="post-count">{posts.length}件の記事</p>
+      </div>
+
+      <!-- 記事グリッド -->
+      {posts.length > 0 ? (
+        <div class="card-grid">
+          {posts.map((post) => (
+            <a href={`/blog/${post.data.slug ?? post.id}/`} class="card">
+              {post.data.heroImage && (
+                <div class="card-img-wrap">
+                  <Image
+                    width={480}
+                    height={240}
+                    src={post.data.heroImage}
+                    alt=""
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0;"
+                  />
+                </div>
+              )}
+              <div class="card-body">
+                <p class="card-date">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+                <h2 class="card-title">{post.data.title}</h2>
+                {post.data.description && (
+                  <p class="card-desc">{post.data.description}</p>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <p class="empty">記事が見つかりませんでした。</p>
+      )}
+
+      <!-- ホームに戻る -->
+      <div class="back-home">
+        <a href="/" class="back-btn">← ホームに戻る</a>
+      </div>
+
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  /* ── パンくず ─────────────────────────────────────────────── */
+  .breadcrumb {
+    font-size: 0.82em;
+    color: #94A3B8;
+    margin-bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+  }
+
+  .breadcrumb a {
+    color: #64748B;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .sep { color: #CBD5E1; }
+
+  /* ── ページヘッダー ───────────────────────────────────────── */
+  .page-header {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #A7F3D0;
+  }
+
+  .page-title {
+    font-size: 1.6em;
+    color: #1E293B;
+    margin: 0 0 0.3em 0;
+    border-bottom: none;
+  }
+
+  .post-count {
+    font-size: 0.85em;
+    color: #64748B;
+    margin: 0;
+  }
+
+  /* ── 記事グリッド ─────────────────────────────────────────── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4em;
+    margin-bottom: 3em;
+  }
+
+  /* ── カード ───────────────────────────────────────────────── */
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(37,99,235,0.07);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 8px 24px rgba(37,99,235,0.12);
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+
+  .card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .card-body {
+    padding: 1.1em 1.2em 1.3em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+  }
+
+  .card-date {
+    font-size: 0.78em;
+    color: #94A3B8;
+    margin: 0;
+  }
+
+  .card-title {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0;
+    line-height: 1.5;
+    border-bottom: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+
+  .card:hover .card-title { color: #2563EB; }
+
+  .card-desc {
+    font-size: 0.8em;
+    color: #64748B;
+    margin: 0;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ── 空状態 ───────────────────────────────────────────────── */
+  .empty {
+    color: #94A3B8;
+    text-align: center;
+    padding: 3em 0;
+  }
+
+  /* ── ホームに戻る ─────────────────────────────────────────── */
+  .back-home {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  .back-btn {
+    display: inline-block;
+    border: 2px solid #2563EB;
+    color: #2563EB;
+    padding: 0.65em 2em;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.92em;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .back-btn:hover {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  /* ── レスポンシブ ─────────────────────────────────────────── */
+  @media (max-width: 800px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 540px) {
+    .card-grid { grid-template-columns: 1fr; }
+    .page-title { font-size: 1.3em; }
+  }
+</style>
