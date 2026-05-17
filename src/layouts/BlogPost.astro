@@ -47,26 +47,25 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 	<body>
 		<Header />
 
-		<!-- ヒーロー画像（mainの外） -->
-		{heroImage && (
-			<div class="hero-wrapper">
-				<div class="hero-image">
-					<Image
-						width={960}
-						height={480}
-						src={heroImage}
-						alt=""
-						style="display:block; width:100%; height:auto; border-radius:0; box-shadow:none;"
-					/>
-				</div>
-			</div>
-		)}
-
 		<main>
 			<div class="article-wrapper">
 
 				<!-- ── メイン記事エリア ── -->
 				<div class="article-main">
+
+					<!-- ヒーロー画像（article-main内） -->
+					{heroImage && (
+						<div class="hero-image-inner">
+							<Image
+								width={800}
+								height={420}
+								src={heroImage}
+								alt=""
+								style="display:block; width:100%; height:auto; border-radius:12px; box-shadow:none;"
+							/>
+						</div>
+					)}
+
 					<article>
 						<div class="prose">
 							<div class="article-header">
@@ -162,20 +161,14 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 </html>
 
 <style>
-	/* ── ヒーロー画像ラッパー ─────────────────────────────────── */
-	.hero-wrapper {
+	/* ── ヒーロー画像（article-main内） ──────────────────────── */
+	.hero-image-inner {
 		width: 100%;
-		background-color: var(--body-bg);
-		padding: 1.5em 1em 0;
-	}
-
-	.hero-image {
-		max-width: 960px;
-		margin: 0 auto;
-		border-radius: 16px;
+		border-radius: 12px;
+		margin-bottom: 2em;
 		overflow: hidden;
-		box-shadow: 0 6px 32px rgba(37, 99, 235, 0.15);
 		line-height: 0;
+		box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
 	}
 
 	/* ── main ────────────────────────────────────────────────── */
@@ -548,20 +541,17 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 	}
 
 	@media (max-width: 720px) {
-		.hero-wrapper {
-			padding: 1em 0.5em 0;
-		}
-
-		.hero-image {
-			border-radius: 10px;
-		}
-
 		main {
 			padding: 1.5em 1em 2em;
 		}
 
 		.article-header h1 {
 			font-size: 1.45em;
+		}
+
+		.hero-image-inner {
+			border-radius: 8px;
+			margin-bottom: 1.5em;
 		}
 	}
 </style>
