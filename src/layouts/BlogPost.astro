@@ -11,16 +11,32 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, slug, category } = Astro.props as CollectionEntry<'blog'>['data'] & { slug?: string; category?: string };
 
-const allPosts = await getCollection('blog');
+const allPosts = (await getCollection('blog'))
+  .filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id));
+
+// 関連記事（同カテゴリ・現在記事を除外・最新3件）
 const relatedPosts = allPosts
   .filter(p =>
     (p.data.slug ?? p.id) !== (slug ?? title) &&
-    (p.data as any).category === category
+    p.data.category === category
   )
-  .sort((a, b) =>
-    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
-  )
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
   .slice(0, 3);
+
+// サイドバー：新着記事（現在記事を除外・最新5件）
+const recentPosts = allPosts
+  .filter(p => (p.data.slug ?? p.id) !== (slug ?? title))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 5);
+
+// サイドバー：カテゴリ一覧
+const sidebarCategories = [
+  { name: '高配当株・配当投資', slug: 'dividend', emoji: '📈' },
+  { name: '投資の始め方',       slug: 'start',    emoji: '🌱' },
+  { name: 'お金の管理',         slug: 'money',    emoji: '💰' },
+  { name: '投資マインド・公務員', slug: 'mindset', emoji: '🧠' },
+];
+const countByCategory = (cat: string) => allPosts.filter(p => p.data.category === cat).length;
 ---
 
 <html lang="ja">
@@ -31,7 +47,7 @@ const relatedPosts = allPosts
 	<body>
 		<Header />
 
-		<!-- hero画像はmainの外に出して独立制御 -->
+		<!-- ヒーロー画像（mainの外） -->
 		{heroImage && (
 			<div class="hero-wrapper">
 				<div class="hero-image">
@@ -47,50 +63,106 @@ const relatedPosts = allPosts
 		)}
 
 		<main>
-			<article>
-				<div class="prose">
-					<div class="article-header">
-						<div class="date-row">
-							<span class="date"><FormattedDate date={pubDate} /></span>
-							{updatedDate && (
-								<span class="updated">更新: <FormattedDate date={updatedDate} /></span>
-							)}
-						</div>
-						<h1>{title}</h1>
-						{description && <p class="description">{description}</p>}
-					</div>
-					<hr />
-					<slot />
-				</div>
-			</article>
+			<div class="article-wrapper">
 
-			{relatedPosts.length > 0 && (
-				<div class="related-posts">
-					<h3>関連記事</h3>
-					<div class="related-grid">
-						{relatedPosts.map(post => (
-							<a href={`/blog/${post.data.slug ?? post.id}/`} class="related-card">
-								{post.data.heroImage && (
-									<img src={post.data.heroImage.src} alt={post.data.title} />
-								)}
-								<div class="related-card-body">
-									<p class="related-date">
-										{new Date(post.data.pubDate).toLocaleDateString('ja-JP')}
-									</p>
-									<p class="related-title">{post.data.title}</p>
+				<!-- ── メイン記事エリア ── -->
+				<div class="article-main">
+					<article>
+						<div class="prose">
+							<div class="article-header">
+								<div class="date-row">
+									<span class="date"><FormattedDate date={pubDate} /></span>
+									{updatedDate && (
+										<span class="updated">更新: <FormattedDate date={updatedDate} /></span>
+									)}
 								</div>
-							</a>
-						))}
-					</div>
+								<h1>{title}</h1>
+								{description && <p class="description">{description}</p>}
+							</div>
+							<hr />
+							<slot />
+						</div>
+					</article>
+
+					<!-- 関連記事 -->
+					{relatedPosts.length > 0 && (
+						<div class="related-posts">
+							<h3>関連記事</h3>
+							<div class="related-grid">
+								{relatedPosts.map(post => (
+									<a href={`/blog/${post.data.slug ?? post.id}/`} class="related-card">
+										{post.data.heroImage && (
+											<img src={post.data.heroImage.src} alt={post.data.title} />
+										)}
+										<div class="related-card-body">
+											<p class="related-date">
+												{new Date(post.data.pubDate).toLocaleDateString('ja-JP')}
+											</p>
+											<p class="related-title">{post.data.title}</p>
+										</div>
+									</a>
+								))}
+							</div>
+						</div>
+					)}
 				</div>
-			)}
+
+				<!-- ── サイドバー ── -->
+				<aside class="article-sidebar">
+
+					<!-- 新着記事 -->
+					<div class="sidebar-section">
+						<h3 class="sidebar-title">新着記事</h3>
+						<ul class="recent-list">
+							{recentPosts.map(post => (
+								<li class="recent-item">
+									<a href={`/blog/${post.data.slug ?? post.id}/`} class="recent-link">
+										{post.data.heroImage && (
+											<img
+												src={post.data.heroImage.src}
+												alt=""
+												class="recent-thumb"
+											/>
+										)}
+										<div class="recent-body">
+											<p class="recent-date">
+												{new Date(post.data.pubDate).toLocaleDateString('ja-JP')}
+											</p>
+											<p class="recent-title">{post.data.title}</p>
+										</div>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+
+					<hr class="sidebar-divider" />
+
+					<!-- カテゴリ一覧 -->
+					<div class="sidebar-section">
+						<h3 class="sidebar-title">カテゴリ</h3>
+						<ul class="cat-list">
+							{sidebarCategories.map(cat => (
+								<li>
+									<a href={`/category/${cat.slug}/`} class="cat-link">
+										<span class="cat-emoji">{cat.emoji}</span>
+										<span class="cat-name">{cat.name}</span>
+										<span class="cat-count">{countByCategory(cat.name)}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+
+				</aside>
+			</div>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-	/* ヒーロー画像ラッパー（mainの外） */
+	/* ── ヒーロー画像ラッパー ─────────────────────────────────── */
 	.hero-wrapper {
 		width: 100%;
 		background-color: var(--body-bg);
@@ -106,12 +178,27 @@ const relatedPosts = allPosts
 		line-height: 0;
 	}
 
-	/* 記事本文エリア */
+	/* ── main ────────────────────────────────────────────────── */
 	main {
-		width: 760px;
-		max-width: calc(100% - 2em);
+		width: 100%;
+		max-width: 1200px;
 		margin: 0 auto;
 		padding: 2em 1em 3em;
+		box-sizing: border-box;
+	}
+
+	/* ── 2カラムラッパー ─────────────────────────────────────── */
+	.article-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 280px;
+		gap: 3em;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	/* ── 記事本文 ────────────────────────────────────────────── */
+	.article-main {
+		min-width: 0; /* グリッドでの縮小を許可 */
 	}
 
 	.prose {
@@ -169,7 +256,7 @@ const relatedPosts = allPosts
 		margin: 2em 0;
 	}
 
-	/* 記事本文のスタイル調整 */
+	/* ── 記事本文スタイル ─────────────────────────────────────── */
 	.prose :global(h2) {
 		font-size: 1.4em;
 		margin-top: 2.2em;
@@ -188,7 +275,6 @@ const relatedPosts = allPosts
 		margin: 1.5em 0;
 	}
 
-	/* 強調引用ボックス */
 	.prose :global(blockquote) {
 		background: #fafafa;
 		border-left: 4px solid #6366f1;
@@ -199,7 +285,6 @@ const relatedPosts = allPosts
 		color: #374151;
 	}
 
-	/* リード文ボックス */
 	.prose :global(.lead-box) {
 		background: #f0f9ff;
 		border-left: 4px solid #0ea5e9;
@@ -210,7 +295,6 @@ const relatedPosts = allPosts
 		line-height: 1.8;
 	}
 
-	/* 重要ポイントボックス */
 	.prose :global(.point-box) {
 		background: #f0fdf4;
 		border: 1.5px solid #86efac;
@@ -219,7 +303,6 @@ const relatedPosts = allPosts
 		margin: 2em 0;
 	}
 
-	/* CTAボックス */
 	.prose :global(.cta-box) {
 		background: #fffbeb;
 		border: 1.5px solid #fcd34d;
@@ -229,13 +312,11 @@ const relatedPosts = allPosts
 		text-align: center;
 	}
 
-	/* 段落の余白・行間 */
 	.prose :global(p) {
 		margin-bottom: 1.6em;
 		line-height: 1.9;
 	}
 
-	/* 箇条書きの余白改善 */
 	.prose :global(ul) {
 		margin: 1.2em 0;
 		padding-left: 1.5em;
@@ -246,14 +327,13 @@ const relatedPosts = allPosts
 		line-height: 1.8;
 	}
 
-	/* セクション区切り */
 	.prose :global(hr) {
 		border: none;
 		border-top: 2px solid #e5e7eb;
 		margin: 3em 0;
 	}
 
-	/* 関連記事セクション */
+	/* ── 関連記事 ────────────────────────────────────────────── */
 	.related-posts {
 		margin-top: 4em;
 		padding-top: 2em;
@@ -308,6 +388,157 @@ const relatedPosts = allPosts
 		font-weight: bold;
 		line-height: 1.5;
 		color: #1f2937;
+	}
+
+	/* ── サイドバー ──────────────────────────────────────────── */
+	.article-sidebar {
+		position: sticky;
+		top: 2em;
+		align-self: start;
+		max-height: calc(100vh - 4em);
+		overflow-y: auto;
+		width: 280px;
+	}
+
+	.sidebar-section {
+		margin-bottom: 0.5em;
+	}
+
+	.sidebar-title {
+		font-size: 0.95em;
+		font-weight: 700;
+		color: #1E293B;
+		padding-bottom: 0.5em;
+		border-bottom: 2px solid #A7F3D0;
+		margin: 0 0 1em 0;
+	}
+
+	.sidebar-divider {
+		border: none;
+		border-top: 1px solid #E2E8F0;
+		margin: 1.5em 0;
+	}
+
+	/* 新着記事リスト */
+	.recent-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	.recent-item {
+		margin: 0;
+	}
+
+	.recent-link {
+		display: flex;
+		gap: 0.7em;
+		text-decoration: none;
+		color: inherit;
+		align-items: flex-start;
+		transition: opacity 0.2s;
+	}
+
+	.recent-link:hover {
+		opacity: 0.75;
+		text-decoration: none;
+	}
+
+	.recent-thumb {
+		width: 72px;
+		height: 54px;
+		object-fit: cover;
+		border-radius: 6px;
+		flex-shrink: 0;
+	}
+
+	.recent-body {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.recent-date {
+		font-size: 0.72em;
+		color: #94A3B8;
+		margin: 0 0 0.25em 0;
+	}
+
+	.recent-title {
+		font-size: 0.82em;
+		font-weight: 600;
+		color: #1E293B;
+		line-height: 1.5;
+		margin: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	/* カテゴリリスト */
+	.cat-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4em;
+	}
+
+	.cat-link {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		padding: 0.45em 0.6em;
+		border-radius: 6px;
+		text-decoration: none;
+		color: #374151;
+		font-size: 0.88em;
+		transition: background-color 0.2s;
+	}
+
+	.cat-link:hover {
+		background-color: #F1F5F9;
+		text-decoration: none;
+	}
+
+	.cat-emoji {
+		font-size: 1em;
+		flex-shrink: 0;
+	}
+
+	.cat-name {
+		flex: 1;
+		font-weight: 500;
+	}
+
+	.cat-count {
+		font-size: 0.8em;
+		color: #94A3B8;
+		background: #F1F5F9;
+		padding: 0.1em 0.5em;
+		border-radius: 10px;
+		flex-shrink: 0;
+	}
+
+	/* ── レスポンシブ ────────────────────────────────────────── */
+	@media (max-width: 768px) {
+		.article-wrapper {
+			grid-template-columns: 1fr;
+		}
+
+		.article-sidebar {
+			position: static;
+			width: 100%;
+			max-height: none;
+			overflow-y: visible;
+			border-top: 2px solid #E2E8F0;
+			padding-top: 2em;
+			margin-top: 1em;
+		}
 	}
 
 	@media (max-width: 640px) {
