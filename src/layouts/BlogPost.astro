@@ -384,7 +384,8 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 		position: sticky;
 		top: 2em;
 		align-self: start;
-		width: 280px;
+		max-height: calc(100vh - 4em);
+		overflow-y: auto;
 	}
 
 	.sidebar-section {
@@ -397,10 +398,11 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 		padding-bottom: 0.5em;
 		border-bottom: 2px solid #0d9488;
 		margin-bottom: 1em;
+		background: white;
 		position: sticky;
 		top: 0;
-		background: white;
 		z-index: 10;
+		padding-top: 0.3em;
 		color: #1E293B;
 	}
 
