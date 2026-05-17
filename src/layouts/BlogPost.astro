@@ -112,30 +112,26 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 					<!-- 新着記事 -->
 					<div class="sidebar-section">
 						<h3 class="sidebar-title">新着記事</h3>
-						<ul class="recent-list">
+						<div class="sidebar-posts">
 							{recentPosts.map(post => (
-								<li class="recent-item">
-									<a href={`/blog/${post.data.slug ?? post.id}/`} class="recent-link">
-										{post.data.heroImage && (
-											<img
-												src={post.data.heroImage.src}
-												alt=""
-												class="recent-thumb"
-											/>
-										)}
-										<div class="recent-body">
-											<p class="recent-date">
-												{new Date(post.data.pubDate).toLocaleDateString('ja-JP')}
-											</p>
-											<p class="recent-title">{post.data.title}</p>
-										</div>
-									</a>
-								</li>
+								<a href={`/blog/${post.data.slug ?? post.id}/`} class="recent-link">
+									{post.data.heroImage && (
+										<img
+											src={post.data.heroImage.src}
+											alt=""
+											class="recent-thumb"
+										/>
+									)}
+									<div class="recent-body">
+										<p class="recent-date">
+											{new Date(post.data.pubDate).toLocaleDateString('ja-JP')}
+										</p>
+										<p class="recent-title">{post.data.title}</p>
+									</div>
+								</a>
 							))}
-						</ul>
+						</div>
 					</div>
-
-					<hr class="sidebar-divider" />
 
 					<!-- カテゴリ一覧 -->
 					<div class="sidebar-section">
@@ -388,44 +384,33 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 		position: sticky;
 		top: 2em;
 		align-self: start;
-		max-height: calc(100vh - 4em);
-		overflow-y: auto;
 		width: 280px;
 	}
 
 	.sidebar-section {
-		margin-bottom: 0.5em;
+		margin-bottom: 2em;
 	}
 
 	.sidebar-title {
-		font-size: 0.95em;
-		font-weight: 700;
-		color: #1E293B;
+		font-size: 1em;
+		font-weight: bold;
 		padding-bottom: 0.5em;
-		border-bottom: 2px solid #A7F3D0;
-		margin: 0 0 1em 0;
+		border-bottom: 2px solid #0d9488;
+		margin-bottom: 1em;
+		position: sticky;
+		top: 0;
+		background: white;
+		z-index: 10;
+		color: #1E293B;
 	}
 
-	.sidebar-divider {
-		border: none;
-		border-top: 1px solid #E2E8F0;
-		margin: 1.5em 0;
-	}
-
-	/* 新着記事リスト */
-	.recent-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	.sidebar-posts {
 		display: flex;
 		flex-direction: column;
 		gap: 1em;
 	}
 
-	.recent-item {
-		margin: 0;
-	}
-
+	/* 新着記事リスト */
 	.recent-link {
 		display: flex;
 		gap: 0.7em;
