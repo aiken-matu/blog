@@ -1,5 +1,5 @@
 ---
-title: 'SBI証券で口座を開設した理由【高配当株投資を始めたい公務員の選び方】'
+title: "SBI証券で口座を開設した理由【高配当株投資を始めるときの証券口座の選び方】"
 description: '高配当株投資のためにSBI証券を選んだ理由を正直に話します。単元未満株の銘柄数・NISA口座・開設手順まで、実体験をもとに解説します。'
 pubDate: '2026-04-25'
 heroImage: '../../assets/sbi-securities-account-open.png'
