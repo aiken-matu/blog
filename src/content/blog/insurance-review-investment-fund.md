@@ -203,7 +203,7 @@ category: "投資の始め方"
 
 保険の見直しを考えているなら、まずは無料相談で現状を整理してみてください。オンラインで気軽に相談できます。
 
-[LINK_マネカフェ]
+<a href="//af.moshimo.com/af/c/click?a_id=5568036&p_id=7333&pc_id=21072&pl_id=92242" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料でFP相談する（マネカフェ）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568036&p_id=7333&pc_id=21072&pl_id=92242" width="1" height="1" style="border:none;" loading="lazy">
 
 ---
 

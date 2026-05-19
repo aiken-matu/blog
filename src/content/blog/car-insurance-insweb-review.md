@@ -123,6 +123,10 @@ category: "お金の管理"
 <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260516561963&wid=001&eno=01&mid=s00000027294001003000&mc=1"></a>
 <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3RV5+FXCGC2+5ULO+5YZ75" alt="">
 
+保険の見直しを考えているなら、無料のFP相談を活用してみてください。オンライン・対面どちらも選べて、無理な勧誘なしで相談できます。
+
+<a href="//af.moshimo.com/af/c/click?a_id=5568036&p_id=7333&pc_id=21072&pl_id=92242" rel="nofollow noreferrer" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料でFP相談する（マネカフェ）</a><img src="//i.moshimo.com/af/i/impression?a_id=5568036&p_id=7333&pc_id=21072&pl_id=92242" width="1" height="1" style="border:none;" loading="lazy">
+
 ### 関連記事
 
 → [貯蓄型保険を解約した話——担当者に言われた3つの呪縛を乗り越えるまで](/blog/insurance-review-guide/)
