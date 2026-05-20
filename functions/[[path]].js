@@ -1,3 +1,3 @@
-export async function onRequest(context) {
-  return context.next();
+export async function onRequest({ request, env }) {
+  return env.ASSETS.fetch(request);
 }
