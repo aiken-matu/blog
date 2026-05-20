@@ -1,10 +1,19 @@
 export async function onRequest(context) {
+  const envKeys = Object.keys(context.env).join(', ') || 'none';
+  const hasAssets = !!context.env.ASSETS;
+
+  if (!hasAssets) {
+    return new Response(
+      'ASSETS not bound. env keys: ' + envKeys,
+      { status: 503, headers: { 'Content-Type': 'text/plain' } }
+    );
+  }
+
   try {
-    const response = await context.env.ASSETS.fetch(context.request);
-    return response;
+    return await context.env.ASSETS.fetch(context.request);
   } catch (e) {
     return new Response(
-      'ASSETS Error: ' + e.constructor.name + ': ' + e.message,
+      'fetch error: ' + e.message,
       { status: 503, headers: { 'Content-Type': 'text/plain' } }
     );
   }
