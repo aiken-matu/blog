@@ -30,14 +30,14 @@ const colors = {
 // ── レイアウト定数 ────────────────────────────────────────────
 const W = 1200;
 const H = 630;
-const MARGIN = 80;          // 左右最小余白
+const MARGIN = 100;         // 左右最小余白
 const CENTER_X = W / 2;
 const FONT = "'Noto Sans JP','Hiragino Kaku Gothic Pro',sans-serif";
 
-// タイトル（2行）
+// タイトル（2行・短縮版）
 const titleLines = [
-  'ジャックス（8584）は減配する？',
-  '配当維持できるか2026年決算から考える',
+  'ジャックスは減配する？',
+  '配当維持を2026年決算から検証',
 ];
 
 // 文字幅の概算（全角=1.0, 半角ASCII=0.5）
@@ -57,7 +57,7 @@ function safeFontSize(lines, maxSize = 68, minSize = 36) {
   return minSize;
 }
 
-const titleFontSize = safeFontSize(titleLines, 62, 36);
+const titleFontSize = safeFontSize(titleLines, 68, 36);
 const titleLineHeight = Math.round(titleFontSize * 1.25);
 
 // タイトルブロックの縦中央位置
@@ -73,12 +73,12 @@ const titleLinesEl = titleLines
   .join('\n  ');
 
 // サブタイトル
-const subtitle = '配当性向89.5%・過去の減配実績・シミュレーションで検証';
+const subtitle = '配当性向89.5%・減配シミュレーション';
 const subtitleY = titleStartY + (titleLines.length - 1) * titleLineHeight + 54;
 const subtitleEl = `<text x="${CENTER_X}" y="${subtitleY}" font-family="${FONT}" font-size="26" font-weight="500" fill="${colors.titleColor}" opacity="0.68" text-anchor="middle" dominant-baseline="auto">${escXML(subtitle)}</text>`;
 
 // タグ（上部）
-const tags = ['ジャックス', '減配リスク', '配当分析'];
+const tags = ['ジャックス', '減配', '高配当株'];
 const tagW = 180, tagGap = 14, tagH = 36;
 const totalTagW = tags.length * tagW + (tags.length - 1) * tagGap;
 const tagStartX = (W - totalTagW) / 2;
