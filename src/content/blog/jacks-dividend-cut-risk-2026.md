@@ -3,6 +3,7 @@ title: "ジャックス（8584）は減配する？配当維持できるか2026�
 description: "ジャックス株の減配リスクを2026年決算データから徹底検証。配当性向89.5％・過去の減配実績・シミュレーションをもとに、高配当株として保有すべきか冷静に分析します。"
 pubDate: 2026-05-21
 heroColor: "orange-brown"
+heroImage: '../../assets/jacks-dividend-cut-risk-2026.png'
 category: "高配当株・配当投資"
 ---
 

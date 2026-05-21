@@ -9,7 +9,7 @@ import { SITE_TITLE } from '../consts';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, slug, category } = Astro.props as CollectionEntry<'blog'>['data'] & { slug?: string; category?: string };
+const { title, description, pubDate, updatedDate, heroImage, slug, category, currentId } = Astro.props as CollectionEntry<'blog'>['data'] & { slug?: string; category?: string; currentId?: string };
 
 const allPosts = (await getCollection('blog'))
   .filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id));
@@ -17,6 +17,7 @@ const allPosts = (await getCollection('blog'))
 // 関連記事（同カテゴリ・現在記事を除外・最新3件）
 const relatedPosts = allPosts
   .filter(p =>
+    p.id !== currentId &&
     (p.data.slug ?? p.id) !== (slug ?? title) &&
     p.data.category === category
   )
@@ -25,7 +26,10 @@ const relatedPosts = allPosts
 
 // サイドバー：新着記事（現在記事を除外・最新5件）
 const recentPosts = allPosts
-  .filter(p => (p.data.slug ?? p.id) !== (slug ?? title))
+  .filter(p =>
+    p.id !== currentId &&
+    (p.data.slug ?? p.id) !== (slug ?? title)
+  )
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
   .slice(0, 5);
 
