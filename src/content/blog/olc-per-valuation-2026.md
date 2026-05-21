@@ -7,8 +7,6 @@ heroImage: "../../assets/olc-per-valuation-2026.png"
 slug: "olc-per-valuation-2026"
 ---
 
-# 【2026年最新】オリエンタルランドのPERは適正？株主優待込みで今が買い時か考えてみた
-
 「オリエンタルランド株、かなり下がったな…」
 
 そう感じている人は多いと思います。
