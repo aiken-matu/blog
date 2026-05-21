@@ -163,6 +163,13 @@ category: "投資の始め方"
 
 完璧な準備を待つ必要はありません。最低限の準備ができたら、シンプルに始めればいい。
 
+<div class="cta-box">
+  <p>📚 投資の基礎を無料で学びたい方へ</p>
+  <p>ファイナンシャルアカデミーでは、株式投資の基礎から実践まで学べる<strong>無料体験セミナー</strong>を開催しています。受講生の約9割がプラスの運用実績を出しており、初心者でも安心して参加できます。</p>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3VR6+4FK6WI+1IRY+25GX8I" rel="nofollow noreferrer" target="_blank">無料体験セミナーに申し込む（ファイナンシャルアカデミー）</a>
+  <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3VR6+4FK6WI+1IRY+25GX8I" alt="">
+</div>
+
 ---
 
 ### 口座開設はこちらから
