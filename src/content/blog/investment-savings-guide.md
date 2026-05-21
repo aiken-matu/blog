@@ -178,12 +178,6 @@ category: "投資の始め方"
 
 <a href="https://ad2.trafficgate.net/t/r/1269/738/317611_396911" target="_blank" rel="nofollow noreferrer">楽天証券で口座を開設する（無料）</a>
 
----
-
-投資を始めるなら、まず証券口座の開設が必要です。楽天証券は初心者にも使いやすく、NISAにも対応しています。
-
-<a href="https://ad2.trafficgate.net/t/r/1269/738/317611_396911" target="_blank" rel="nofollow noreferrer">楽天証券で口座を開設する（無料）</a>
-
 ### 関連記事
 
 - [NISAが怖くて始められない人へ｜損しないために最初に知るべきこと](/blog/nisa-beginner-fear-guide/)

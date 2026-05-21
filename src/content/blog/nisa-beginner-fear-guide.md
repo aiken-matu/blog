@@ -184,12 +184,6 @@ NISAが怖いと感じるのは自然です。でも、その正体は 👉 「�
 
 <a href="https://ad2.trafficgate.net/t/r/1269/738/317611_396911" target="_blank" rel="nofollow noreferrer">楽天証券で口座を開設する（無料）</a>
 
----
-
-投資を始めるなら、まず証券口座の開設が必要です。楽天証券は初心者にも使いやすく、NISAにも対応しています。
-
-<a href="https://ad2.trafficgate.net/t/r/1269/738/317611_396911" target="_blank" rel="nofollow noreferrer">楽天証券で口座を開設する（無料）</a>
-
 ### 関連記事
 
 - [「今すぐ始めていい」——積立投資を始めるのにいいタイミングなんて存在しない](/blog/investment-start-now/)
