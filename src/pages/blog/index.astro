@@ -119,6 +119,7 @@ const categories = [
 	function applyFilter(filter: string) {
 		currentFilter = filter;
 		let visible = 0;
+		let total = 0;
 
 		cards.forEach((card) => {
 			const cat   = card.dataset.category ?? 'other';
@@ -129,9 +130,11 @@ const categories = [
 			const show = matchesFilter && withinLimit;
 			card.style.display = show ? '' : 'none';
 			if (show) visible++;
+			if (matchesFilter) total++;  // 表示制限に関わらず一致件数を集計
 		});
 
-		if (counter) counter.textContent = `${visible}件の記事`;
+		// カウンターはフィルター一致の総件数を表示（表示中の件数ではない）
+		if (counter) counter.textContent = `${total}件の記事`;
 
 		buttons.forEach((btn) => {
 			btn.classList.toggle('active', btn.dataset.filter === filter);
