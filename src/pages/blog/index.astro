@@ -11,83 +11,12 @@ const posts = (await getCollection('blog'))
 	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// slug → category mapping
-// effective slug = post.data.slug ?? post.id
-const categoryMap: Record<string, string> = {
-	// ① 高配当株・配当投資
-	'how-to-buy-dividend-stocks-with-nisa':  'dividend',
-	'dividend-covers-fixed-costs':           'dividend',
-	'dividend-cut-patterns':                 'dividend',
-	'dividend-stock-first-step':             'dividend',
-	'growing-dividend-stocks-appeal':        'dividend',
-	'high-dividend-stock-selection':         'dividend',
-	'how-much-capital-for-dividend-life':    'dividend',
-	'nisa-dividend-road':                    'dividend',
-	'portfolio-design':                      'dividend',
-	'sekisui-house-dividend-analysis':       'dividend',
-	'tosoh-dividend-risk-analysis':          'dividend',
-	'yellow-hat-dividend-analysis':          'dividend',
-	'aeon-stock-analysis':                   'dividend',
-	'high-dividend-buy-timing':              'dividend',
-	'jacks-failure-lesson':                  'dividend',
-	'nikkei-60000-my-thoughts':              'mindset',
-	'why-stock-falls-after-earnings':        'mindset',
-	'what-is-sector-diversification':        'dividend',
-	// ② 投資の始め方
-	'how-i-started-ideco':                   'start',
-	'how-to-open-brokerage-account-sbi-rakuten': 'start',
-	'how-to-start-monthly-investing-10000-yen':  'start',
-	'ideco-performance-report':              'start',
-	'ideco-vs-nisa':                         'start',
-	'investment-start-now':                  'start',
-	'matsui-ideco-guide':                    'start',
-	'sbi-securities-account-open':           'start',
-	// ③ お金の管理
-	'dneobank-sbi-review':                   'money',
-	'insurance-review-guide':                'money',
-	'car-insurance-insweb-review':           'money',
-	'investment-fund-creation':              'money',
-	'rakuten-bank-guide':                    'money',
-	'rakuten-moneybridge-guide':             'money',
-	'rakuten-card-diamond':                  'money',
-	'smbc-gold-nl-10000points':              'money',
-	'smbc-gold-nl-100man':                   'money',
-	// ④ 投資マインド・公務員
-	'gw-investment-review':                  'mindset',
-	'civil-servant-investment-overview':     'mindset',
-	'civil-servant-retirement-pension':      'mindset',
-	'civil-servant-salary-investing':        'mindset',
-	'family-investment-talk':                'mindset',
-	'mental-health-for-investing':           'mindset',
-	'no-materialism-after-investing':        'mindset',
-	'no-panic-sell-corona-shock':            'mindset',
-	'to-my-past-self-who-feared-investing':  'mindset',
-	'value-based-spending-mindset':          'mindset',
-	'why-i-started-investing-as-civil-servant': 'mindset',
-	'investment-mindset-continue':             'mindset',
-	'lifelong-investor-confidence':            'mindset',
-	'mitsubishi-corp-dividend-analysis':       'dividend',
-	'mitsubishi-corp-2026-earnings':           'dividend',
-	'ntt-dividend-analysis-2026':              'dividend',
-	'investor-gw-guide':                       'mindset',
-	'oriental-land-stock-analysis':            'dividend',
-	'oriental-land-fair-value':                'dividend',
-	'nisa-beginner-fear-guide':                'start',
-	'investment-savings-guide':                'start',
-	'high-dividend-basics-beginner':           'dividend',
-	'high-dividend-recommended-stocks':        'dividend',
-	'bad-high-dividend-stocks':                'dividend',
-	'nisa-growth-dividend-stocks':             'dividend',
-	'jt-dividend-stock-analysis':              'dividend',
-	'bad-dividend-stock-guide':                'dividend',
-	'investment-money-guide':                  'start',
-	'sector-diversification-guide':            'dividend',
-	'ntt-dividend-why-popular':                'dividend',
-	'mitsubishi-hc-capital-analysis':          'dividend',
-	'tokio-marine-analysis':                   'dividend',
-	'kddi-dividend-analysis':                  'dividend',
-	'moneiro-free-consultation':               'start',
-	'insurance-review-investment-fund':        'money',
+// frontmatterのcategoryフィールドをフィルターキーに変換する
+const categoryKeyMap: Record<string, string> = {
+	'高配当株・配当投資': 'dividend',
+	'投資の始め方':       'start',
+	'お金の管理':         'money',
+	'投資マインド・公務員': 'mindset',
 };
 
 const categories = [
@@ -131,7 +60,7 @@ const categories = [
 			<div class="card-grid" id="card-grid">
 				{posts.map((post, i) => {
 					const effectiveSlug = post.data.slug ?? post.id;
-					const category = categoryMap[effectiveSlug] ?? 'other';
+					const category = categoryKeyMap[post.data.category ?? ''] ?? 'other';
 					return (
 						<a
 							href={`/blog/${effectiveSlug}/`}
