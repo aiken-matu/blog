@@ -1,6 +1,6 @@
 ---
 title: "【2026年最新】オリエンタルランド株はなぜ下がる？株価下落の理由と今後の見通しを解説"
-description: "オリエンタルランド株価が2026年に64%下落した本当の理由を徹底解説。株価下落の背景・要因・今後の見通しを公務員投資家が分析します。"
+description: "オリエンタルランド株が64%下落した本当の理由を徹底解説。優待制度の変更・業績・PERの割高感など構造的な要因と今後の見通しを公務員投資家が分析。"
 pubDate: 2026-05-20
 heroImage: ../../assets/oriental-land-stock-analysis.png
 slug: "oriental-land-stock-analysis"
