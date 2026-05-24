@@ -1,7 +1,7 @@
 ---
 title: "【2026年5月決算】NTT株の決算を分析｜増配・売上・EPSから今後を読む"
 pubDate: 2026-05-21
-description: "NTTの2026年5月決算を徹底分析。増収増益・増配継続の内容を売上・EPS・キャッシュフロー・財務から読み解き、長期保有・配当投資としての評価をまとめます。"
+description: "NTTの2026年5月決算は増収増益・連続増配を達成。売上・EPS・キャッシュフローの数字から長期保有・配当投資としての評価を公務員投資家が解説します。"
 category: "高配当株・配当投資"
 heroImage: "../../assets/ntt-earnings-analysis-2026.png"
 slug: "ntt-earnings-analysis-2026"
