@@ -1,7 +1,7 @@
 ---
 title: "【2026年最新】オリエンタルランドのPERは適正？株主優待込みで今が買い時か考えてみた"
 pubDate: 2026-05-21
-description: "オリエンタルランド株のPERは適正水準？64%下落後の今が買い時かを、PER推移・EPS・配当利回り・株主優待の価値から徹底分析します。"
+description: "オリエンタルランド株は今が買い時？64%下落後の買うべきか判断をPER・EPS・株主優待の価値から分析。適正株価と今後の見通しをわかりやすく解説します。"
 category: "高配当株・配当投資"
 heroImage: "../../assets/olc-per-valuation-2026.png"
 slug: "olc-per-valuation-2026"
