@@ -265,3 +265,8 @@ category: "投資の始め方"
 - [投資に回していいお金の判断基準｜生活防衛費と余剰資金の考え方](/blog/investment-money-guide/)
 
 - [高配当株は利回りだけ見てはダメ？初心者が最初に知るべき5つの基本](/blog/high-dividend-basics-beginner/)
+
+松井証券は、NISA・高配当株投資・米国株など幅広い投資サービスを手数料無料から始められるネット証券です。口座開設は無料ですので、まずは開設だけでも試してみてください。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" rel="nofollow noreferrer" target="_blank">松井証券で口座を開設する（無料）</a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" alt="">

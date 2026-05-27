@@ -123,3 +123,8 @@ SBI証券の「S株」は、国内上場株式のほぼすべてに対応して�
 投資を始めるなら、まず証券口座の開設が必要です。楽天証券は初心者にも使いやすく、NISAにも対応しています。
 
 <a href="https://ad2.trafficgate.net/t/r/1269/738/317611_396911" target="_blank" rel="nofollow noreferrer">楽天証券で口座を開設する（無料）</a>
+
+松井証券は、NISA・高配当株投資・米国株など幅広い投資サービスを手数料無料から始められるネット証券です。口座開設は無料ですので、まずは開設だけでも試してみてください。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" rel="nofollow noreferrer" target="_blank">松井証券で口座を開設する（無料）</a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" alt="">

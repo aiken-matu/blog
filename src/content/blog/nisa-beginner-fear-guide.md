@@ -191,3 +191,8 @@ NISAが怖いと感じるのは自然です。でも、その正体は 👉 「�
 - [iDeCoとNISAどちらを先にやるべきか——公務員の正解](/blog/ideco-vs-nisa/)
 
 - [配当利回りだけで買って後悔…私がジャックスで40%暴落を経験して学んだこと](/blog/jacks-failure-lesson/)
+
+松井証券は、NISA・高配当株投資・米国株など幅広い投資サービスを手数料無料から始められるネット証券です。口座開設は無料ですので、まずは開設だけでも試してみてください。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" rel="nofollow noreferrer" target="_blank">松井証券で口座を開設する（無料）</a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" alt="">
