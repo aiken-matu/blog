@@ -1,6 +1,6 @@
 ---
 title: "【2026年最新】NTT株は今買い時？決算・増配・配当利回りから判断してみた"
-description: "2026年5月のNTT決算結果を徹底解説。増配・売上・利益の実態と、高配当株として今後も持ち続けるべきかを公務員投資家トニーが分析します。"
+description: "2026年5月のNTT決算結果を徹底解説。増配・売上・利益の実態と、高配当株として今後も持ち続けるべきかを長期投資家の視点で分析します。"
 pubDate: 2026-05-17
 heroImage: ../../assets/ntt-dividend-analysis-2026.png
 slug: "ntt-dividend-analysis-2026"
