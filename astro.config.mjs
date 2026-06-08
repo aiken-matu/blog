@@ -8,6 +8,9 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://haitobiyori.com',
 	integrations: [mdx(), sitemap()],
+	redirects: {
+		'/blog/aeon-stock-analysis/': '/blog/aeon-stock-price-drop-reasons-2026/',
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),
