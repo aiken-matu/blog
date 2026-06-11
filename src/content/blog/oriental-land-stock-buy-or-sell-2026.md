@@ -281,6 +281,16 @@ slug: "oriental-land-stock-buy-or-sell-2026"
 
 ---
 
+## 他の銘柄と比較したい方へ
+
+配当収入を増やすことが目的なら、オリエンタルランドよりも高配当株が向いています。
+当ブログでは実際に保有している銘柄を中心に分析記事を書いています。
+
+- [NTT株は買いか？2026年の配当・業績を解説](/blog/ntt-dividend-analysis-2026/)
+- [高配当株の選び方と私が使っている基準](/blog/high-dividend-basics-beginner/)
+
+---
+
 ## まとめ｜私はディズニーは好き。でも今は買わない
 
 オリエンタルランド株が下落している理由は、
@@ -315,11 +325,21 @@ slug: "oriental-land-stock-buy-or-sell-2026"
 
 高配当株投資を始めるなら、まずは証券口座が必要です。
 
-私自身も複数の証券会社を活用していますが、初心者の方には使いやすさや手数料面から、
+私自身も複数の証券会社を活用していますが、初心者の方には以下がおすすめです。
 
-* 松井証券
-* 楽天証券
+<div class="cta-box">
 
-が有力候補です。
+📝 開示：筆者はアフィリエイト報酬を受け取る場合があります。
 
-口座開設は無料なので、まずは準備だけでも済ませておくと、良い銘柄が見つかったときにすぐ行動できます。
+**松井証券**（NISA・高配当株に対応、手数料体系がシンプル）
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" rel="nofollow noreferrer" target="_blank">松井証券で口座を開設する（無料）</a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B3YVA+G994FM+3XCC+6AZAQ" alt="">
+
+**楽天証券**（楽天ポイントで投資できる、NISA口座に人気）
+
+<a href="https://ad2.trafficgate.net/t/r/1269/738/317611_396911" target="_blank" rel="nofollow noreferrer">楽天証券で口座を開設する（無料）</a>
+
+口座開設は無料です。良い銘柄が見つかったときにすぐ行動できるよう、準備だけでも済ませておくことをおすすめします。
+
+</div>
