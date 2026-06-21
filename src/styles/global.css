@@ -1,22 +1,26 @@
 /*
   配当日和 - Global Styles
-  白＋薄い青をベースにした清潔感のあるデザイン
+  クリームホワイト＋テラコッタ＋ゴールドのライフスタイルブログ仕様
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800&display=swap');
+
 :root {
-	--accent: #2563EB;
-	--accent-dark: #1D4ED8;
-	--accent-light: #EFF6FF;
-	--accent-medium: #DBEAFE;
-	--accent-border: #BFDBFE;
-	--black: 15, 18, 25;
-	--gray: 100, 116, 139;
-	--gray-light: 226, 232, 240;
-	--gray-dark: 30, 41, 59;
-	--body-bg: #F8FAFC;
+	--accent: #C0714F;
+	--accent-dark: #A05A3C;
+	--accent-light: #FAF0E8;
+	--accent-medium: #F0EAE0;
+	--accent-border: #DDD0C0;
+	--accent-gold: #C9A84C;
+	--black: 44, 44, 44;
+	--gray: 120, 110, 100;
+	--gray-light: 220, 212, 200;
+	--gray-dark: 44, 44, 44;
+	--body-bg: #FAF7F2;
+	--sub-bg: #F0EAE0;
 	--card-bg: #FFFFFF;
-	--box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(37, 99, 235, 0.07);
-	--box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.10), 0 8px 24px rgba(37, 99, 235, 0.12);
+	--box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(192, 113, 79, 0.08);
+	--box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.10), 0 8px 24px rgba(192, 113, 79, 0.14);
 }
 
 body {
@@ -49,6 +53,7 @@ h6 {
 	color: rgb(var(--black));
 	line-height: 1.3;
 	font-weight: 700;
+	font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
 }
 
 h1 {
@@ -132,7 +137,7 @@ th {
 }
 
 tr:nth-child(even) td {
-	background-color: #F0F7FF;
+	background-color: #FAF4EE;
 }
 
 tr:hover td {
@@ -156,7 +161,7 @@ img {
 /* コード */
 code {
 	padding: 2px 6px;
-	background-color: var(--accent-light);
+	background-color: var(--accent-medium);
 	border: 1px solid var(--accent-border);
 	border-radius: 4px;
 	font-size: 0.9em;
@@ -179,7 +184,7 @@ pre > code {
 /* 引用 */
 blockquote {
 	border-left: 4px solid var(--accent);
-	background-color: var(--accent-light);
+	background-color: var(--accent-medium);
 	padding: 1em 1.2em;
 	margin: 1.5em 0;
 	border-radius: 0 8px 8px 0;
