@@ -126,10 +126,10 @@ const categories = [
 	/* ── ヒーロー ──────────────────────────────────────────────── */
 	.hero {
 		background:
-			radial-gradient(ellipse at 92% 100%, rgba(167, 243, 208, 0.30) 0%, transparent 48%),
-			linear-gradient(130deg, #F8FBFF 0%, #FAFFFE 55%, #F5FFFA 100%);
+			radial-gradient(ellipse at 92% 100%, rgba(201, 168, 76, 0.15) 0%, transparent 48%),
+			linear-gradient(130deg, #FAF7F2 0%, #FAF3EC 55%, #FDF6EE 100%);
 		border-radius: 16px;
-		border-top: 3px solid #93C5FD;
+		border-top: 3px solid #DDD0C0;
 		padding: 3em 2.5em 3em;
 		margin-bottom: 3em;
 		text-align: center;
@@ -141,7 +141,7 @@ const categories = [
 		position: absolute;
 		top: 0; left: 0;
 		width: 4px; height: 100%;
-		background: linear-gradient(180deg, #93C5FD 0%, #BFDBFE 70%, transparent 100%);
+		background: linear-gradient(180deg, #C0714F 0%, #DDD0C0 70%, transparent 100%);
 		border-radius: 16px 0 0 16px;
 	}
 
@@ -150,7 +150,7 @@ const categories = [
 		bottom: -60px; right: -60px;
 		width: 220px; height: 220px;
 		border-radius: 50%;
-		background: radial-gradient(circle, rgba(110,231,183,0.20) 0%, rgba(167,243,208,0.08) 50%, transparent 70%);
+		background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, rgba(192,113,79,0.06) 50%, transparent 70%);
 		pointer-events: none;
 	}
 
@@ -158,7 +158,7 @@ const categories = [
 
 	.hero-eyebrow {
 		font-size: 0.82em;
-		color: #3B82F6;
+		color: #C0714F;
 		font-weight: 600;
 		letter-spacing: 0.06em;
 		margin: 0 0 0.6em 0;
@@ -166,7 +166,7 @@ const categories = [
 
 	.hero-title {
 		font-size: 2.6em;
-		color: #1D4ED8;
+		color: #C0714F;
 		margin: 0 0 0.5em 0;
 		letter-spacing: 0.02em;
 		line-height: 1.3;
@@ -175,7 +175,7 @@ const categories = [
 
 	.hero-desc {
 		font-size: 0.95em;
-		color: #475569;
+		color: #6B5E52;
 		margin: 0 0 1.8em 0;
 		line-height: 1.9;
 	}
@@ -191,7 +191,7 @@ const categories = [
 
 	.badge {
 		background: #FFFFFF;
-		border: 1.5px solid #BFDBFE;
+		border: 1.5px solid #DDD0C0;
 		border-radius: 10px;
 		padding: 0.6em 1.2em;
 		display: flex;
@@ -199,25 +199,25 @@ const categories = [
 		align-items: center;
 		gap: 0.15em;
 		min-width: 110px;
-		box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+		box-shadow: 0 1px 4px rgba(192,113,79,0.08);
 	}
 
 	.badge-num {
 		font-size: 1.05em;
 		font-weight: 800;
-		color: #1D4ED8;
+		color: #C0714F;
 		white-space: nowrap;
 	}
 
 	.badge-label {
 		font-size: 0.72em;
-		color: #64748B;
+		color: #9C8B7A;
 		font-weight: 500;
 	}
 
 	.hero-btn {
 		display: inline-block;
-		background: linear-gradient(135deg, #059669 0%, #0D9488 100%);
+		background: linear-gradient(135deg, #C0714F 0%, #A05A3C 100%);
 		color: #FFFFFF;
 		padding: 0.7em 1.8em;
 		border-radius: 8px;
@@ -225,12 +225,12 @@ const categories = [
 		font-size: 0.95em;
 		text-decoration: none;
 		transition: opacity 0.2s, box-shadow 0.2s;
-		box-shadow: 0 2px 10px rgba(5,150,105,0.25);
+		box-shadow: 0 2px 10px rgba(192,113,79,0.30);
 	}
 
 	.hero-btn:hover {
 		opacity: 0.88;
-		box-shadow: 0 4px 16px rgba(5,150,105,0.35);
+		box-shadow: 0 4px 16px rgba(192,113,79,0.40);
 		text-decoration: none;
 		color: #FFFFFF;
 	}
@@ -238,10 +238,10 @@ const categories = [
 	/* ── セクション共通 ────────────────────────────────────────── */
 	.section-title {
 		font-size: 1.3em;
-		color: #1E293B;
+		color: #2C2C2C;
 		margin: 0 0 1.5em 0;
 		padding-bottom: 0.5em;
-		border-bottom: 2px solid #A7F3D0;
+		border-bottom: 2px solid #C9A84C;
 	}
 
 	/* ── カテゴリから探す ──────────────────────────────────────── */
@@ -261,7 +261,7 @@ const categories = [
 		align-items: center;
 		gap: 0.5em;
 		background: #FFFFFF;
-		border: 1.5px solid #E2E8F0;
+		border: 1.5px solid #DDD0C0;
 		border-radius: 12px;
 		padding: 1.4em 1em;
 		text-decoration: none;
@@ -271,9 +271,9 @@ const categories = [
 	}
 
 	.category-card:hover {
-		box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+		box-shadow: 0 4px 16px rgba(192,113,79,0.14);
 		transform: translateY(-2px);
-		border-color: #93C5FD;
+		border-color: #C0714F;
 		text-decoration: none;
 	}
 
@@ -285,13 +285,13 @@ const categories = [
 	.cat-name {
 		font-size: 0.88em;
 		font-weight: 700;
-		color: #1E293B;
+		color: #2C2C2C;
 		line-height: 1.4;
 	}
 
 	.cat-count {
 		font-size: 0.76em;
-		color: #64748B;
+		color: #9C8B7A;
 		font-weight: 500;
 	}
 
@@ -310,7 +310,7 @@ const categories = [
 		flex-direction: column;
 		background: #FFFFFF;
 		border-radius: 12px;
-		box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(37,99,235,0.07);
+		box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(192,113,79,0.07);
 		text-decoration: none;
 		color: inherit;
 		overflow: hidden;
@@ -318,7 +318,7 @@ const categories = [
 	}
 
 	.card:hover {
-		box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 8px 24px rgba(37,99,235,0.12);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 8px 24px rgba(192,113,79,0.12);
 		transform: translateY(-3px);
 		text-decoration: none;
 	}
@@ -341,14 +341,14 @@ const categories = [
 
 	.card-date {
 		font-size: 0.78em;
-		color: #94A3B8;
+		color: #9C8B7A;
 		margin: 0;
 	}
 
 	.card-title {
 		font-size: 0.95em;
 		font-weight: 700;
-		color: #1E293B;
+		color: #2C2C2C;
 		margin: 0;
 		line-height: 1.5;
 		border-bottom: none;
@@ -360,11 +360,11 @@ const categories = [
 		word-break: break-all;
 	}
 
-	.card:hover .card-title { color: #2563EB; }
+	.card:hover .card-title { color: #C0714F; }
 
 	.card-desc {
 		font-size: 0.8em;
-		color: #64748B;
+		color: #6B5E52;
 		margin: 0;
 		line-height: 1.6;
 		display: -webkit-box;
@@ -378,8 +378,8 @@ const categories = [
 
 	.see-all-btn {
 		display: inline-block;
-		border: 2px solid #2563EB;
-		color: #2563EB;
+		border: 2px solid #C0714F;
+		color: #C0714F;
 		padding: 0.65em 2em;
 		border-radius: 8px;
 		font-weight: 600;
@@ -389,7 +389,7 @@ const categories = [
 	}
 
 	.see-all-btn:hover {
-		background-color: #2563EB;
+		background-color: #C0714F;
 		color: #FFFFFF;
 		text-decoration: none;
 	}
