@@ -7,8 +7,8 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import OgSiteImage from '../assets/og-site.png';
-import HeroMain from '../assets/blog-placeholder-2.jpg';
-import HeroSub from '../assets/blog-placeholder-3.jpg';
+import HeroMain from '../assets/hero-main.jpg';
+import HeroSub from '../assets/hero-sub.jpg';
 
 const allPosts = (await getCollection('blog'))
 	.filter(p => !['first-post', 'second-post', 'third-post', 'markdown-style-guide', 'using-mdx'].includes(p.id));
