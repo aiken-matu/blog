@@ -311,8 +311,9 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 	}
 
 	.prose :global(.cta-box) {
-		background: #C0714F;
-		color: #FFFFFF;
+		background: #FDF8F3;
+		border: 2px solid #C0714F;
+		color: #2C2C2C;
 		padding: 1.5em;
 		border-radius: 8px;
 		margin: 2.5em 0;
@@ -321,6 +322,10 @@ const countByCategory = (cat: string) => allPosts.filter(p => p.data.category ==
 
 	.prose :global(.cta-box p) {
 		text-align: left;
+	}
+
+	.prose :global(.cta-box a) {
+		color: #C0714F;
 	}
 
 	.prose :global(p) {
