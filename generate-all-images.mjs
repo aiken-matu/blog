@@ -75,251 +75,240 @@ async function gen(filename, opts) {
   console.log(`✅ ${filename}`);
 }
 
-// ── Pastel color presets ─────────────────────────────────────────────────────
-// grad1=Tailwind-100（淡い起点）, grad2=Tailwind-300（鮮やかな終点）で彩度アップ
-// bar=Tailwind-500で視認性を確保
+// ── Color presets ─────────────────────────────────────────────────────────────
 const P = {
-  blue:          { grad1:'#DBEAFE', grad2:'#93C5FD', bar:'#3B82F6', tagColor:'#1D4ED8', titleColor:'#1E3A8A' },
-  blueTeal:      { grad1:'#DBEAFE', grad2:'#99F6E4', bar:'#14B8A6', tagColor:'#0F766E', titleColor:'#1E3A8A' },
-  sky:           { grad1:'#E0F2FE', grad2:'#7DD3FC', bar:'#0EA5E9', tagColor:'#0369A1', titleColor:'#0C4A6E' },
-  emerald:       { grad1:'#ECFDF5', grad2:'#6EE7B7', bar:'#10B981', tagColor:'#047857', titleColor:'#064E3B' },
-  green:         { grad1:'#F0FDF4', grad2:'#BBF7D0', bar:'#22C55E', tagColor:'#15803D', titleColor:'#14532D' },
-  teal:          { grad1:'#F0FDFA', grad2:'#99F6E4', bar:'#14B8A6', tagColor:'#0F766E', titleColor:'#134E4A' },
-  indigo:        { grad1:'#EEF2FF', grad2:'#C7D2FE', bar:'#6366F1', tagColor:'#4338CA', titleColor:'#312E81' },
-  indigoEmerald: { grad1:'#EEF2FF', grad2:'#A7F3D0', bar:'#6366F1', tagColor:'#4338CA', titleColor:'#312E81' },
-  purple:        { grad1:'#FAF5FF', grad2:'#DDD6FE', bar:'#A855F7', tagColor:'#7E22CE', titleColor:'#4C1D95' },
-  fuchsia:       { grad1:'#FDF4FF', grad2:'#F5D0FE', bar:'#D946EF', tagColor:'#A21CAF', titleColor:'#701A75' },
-  amber:         { grad1:'#FFFBEB', grad2:'#FDE68A', bar:'#F59E0B', tagColor:'#B45309', titleColor:'#78350F' },
-  red:           { grad1:'#FFF1F2', grad2:'#FECDD3', bar:'#F43F5E', tagColor:'#BE123C', titleColor:'#881337' },
-  orangeBrown:   { grad1:'#FFF7ED', grad2:'#FED7AA', bar:'#F97316', tagColor:'#C2410C', titleColor:'#7C2D12' },
-  slate:         { grad1:'#F1F5F9', grad2:'#CBD5E1', bar:'#64748B', tagColor:'#334155', titleColor:'#0F172A' },
+  // ── テラコッタ系（新カラー） ──────────────────────────────────────────────
+  terracotta:    { grad1:'#FDF8F3', grad2:'#F4D9C4', bar:'#C0714F', tagColor:'#A05A3C', titleColor:'#5C2D10' },
+  gold:          { grad1:'#FDFAF0', grad2:'#F5E8C0', bar:'#C9A84C', tagColor:'#8B6820', titleColor:'#4C3A08' },
+  cream:         { grad1:'#FAF7F2', grad2:'#F0E6D8', bar:'#A0856A', tagColor:'#7A5A40', titleColor:'#3C2A1A' },
+  sunset:        { grad1:'#FFF4EE', grad2:'#FFD4B8', bar:'#D8743A', tagColor:'#B85428', titleColor:'#6C2C10' },
 };
 
 // ── Image definitions (全33枚) ──────────────────────────────────────────────
 
 const images = [
 
-  // ── BLUE ────────────────────────────────────────────────────────────────
-  { file: 'how-to-buy-high-dividend-stocks-with-nisa.png', ...P.blue,
+  // ── TERRACOTTA（旧 blue） ─────────────────────────────────────────────────
+  { file: 'how-to-buy-high-dividend-stocks-with-nisa.png', ...P.terracotta,
     tags: ['NISA', '高配当株', '投資入門'],
     title: ['NISAで高配当株を', '買う方法'],
     subtitle: '成長投資枠を活かして配当金を非課税で受け取る',
     features: ['非課税メリット', '成長投資枠', '分散投資'] },
 
-  { file: 'how-to-open-brokerage-account-sbi-rakuten.png', ...P.blue,
+  { file: 'how-to-open-brokerage-account-sbi-rakuten.png', ...P.terracotta,
     tags: ['証券口座', 'SBI証券', '楽天証券'],
     title: ['証券口座の開き方', '【SBI・楽天比較】'],
     subtitle: null,
     features: ['口座開設手順', '単元未満株', 'NISA対応'] },
 
-  { file: 'high-dividend-stock-selection.png', ...P.blue,
+  { file: 'high-dividend-stock-selection.png', ...P.terracotta,
     tags: ['銘柄選定', '高配当株', '投資基準'],
     title: ['高配当株の銘柄選定'],
     subtitle: '愛せる企業に出会うために',
     features: ['利回り3%以上', 'EPS長期安定', '長期保有前提'] },
 
-  { file: 'civil-servant-investor-asset-overview.png', ...P.blue,
+  { file: 'civil-servant-investor-asset-overview.png', ...P.terracotta,
     tags: ['公務員', '資産形成', '全体戦略'],
     title: ['公務員投資家の', '資産形成全体像'],
     subtitle: '3つの役割と1つの公式',
     features: ['iDeCo', 'NISA', '高配当株'] },
 
-  { file: 'sbi-securities-account-open.png', ...P.blue,
+  { file: 'sbi-securities-account-open.png', ...P.terracotta,
     tags: ['SBI証券', '口座開設', '高配当株'],
     title: ['SBI証券で口座を', '開設した理由'],
     subtitle: '高配当株投資を始めたい公務員の選び方',
     features: ['単元未満株', 'S株無料', 'NISA口座'] },
 
-  { file: 'nisa-dividend-road.png', ...P.blue,
+  { file: 'nisa-dividend-road.png', ...P.terracotta,
     tags: ['NISA', '高配当株', '配当金'],
     title: ['資産は増えているのに', '生活が豊かにならない'],
     subtitle: '高配当株投資で年90万円の配当金を得るまで',
     features: ['2年半の記録', '税引後90万円', '正直な話'] },
 
-  // ── BLUE × TEAL ─────────────────────────────────────────────────────────
-  { file: 'dividend-stock-first-step.png', ...P.blueTeal,
+  // ── TERRACOTTA（旧 blueTeal） ─────────────────────────────────────────────
+  { file: 'dividend-stock-first-step.png', ...P.terracotta,
     tags: ['高配当株', '投資入門', '始め方'],
     title: ['インデックス投資だけでは', '物足りなくなったら'],
     subtitle: '高配当株投資の始め方',
     features: ['最初の1株', 'セクター分散', '銘柄選定'] },
 
-  { file: 'index-fund-start-guide.png', ...P.blueTeal,
+  { file: 'index-fund-start-guide.png', ...P.terracotta,
     tags: ['積立投資', 'NISA', '投資入門'],
     title: ['「今すぐ始めていい」', '積立投資を始めるのに', 'いいタイミングはない'],
     subtitle: null,
     features: ['タイミング不要', '暴落はチャンス', '今日設定する'] },
 
-  { file: 'portfolio-design.png', ...P.blueTeal,
+  { file: 'portfolio-design.png', ...P.terracotta,
     tags: ['ポートフォリオ', 'セクター分散', '高配当株'],
     title: ['100銘柄以上持つ理由'],
     subtitle: 'お気に入り銘柄なんてない、それが分散投資の本質',
     features: ['100銘柄以上保有', '30業種以上に分散', '安定配当の設計'] },
 
-  // ── SKY BLUE ─────────────────────────────────────────────────────────────
-  { file: 'civil-servant-salary-investing.png', ...P.sky,
+  // ── TERRACOTTA（旧 sky） ──────────────────────────────────────────────────
+  { file: 'civil-servant-salary-investing.png', ...P.terracotta,
     tags: ['公務員', '給料管理', '仕組み化'],
     title: ['公務員の給料と', '投資の組み合わせ方'],
     subtitle: '仕組み化でほったらかし',
     features: ['自動化設計', '積立ルール', 'ほったらかし投資'] },
 
-  { file: 'dneobank-sbi-review.png', ...P.sky,
+  { file: 'dneobank-sbi-review.png', ...P.terracotta,
     tags: ['dNEOBANK', 'SBI証券', '仕組み化'],
     title: ['dNEOBANKを', 'SBI証券と一緒に使う理由'],
     subtitle: '公務員の資産管理術',
     features: ['自動入金設定', '目的別口座', 'スマホATM'] },
 
-  // ── EMERALD ──────────────────────────────────────────────────────────────
-  { file: 'how-to-start-monthly-investing-10000-yen.png', ...P.emerald,
+  // ── TERRACOTTA（旧 emerald） ──────────────────────────────────────────────
+  { file: 'how-to-start-monthly-investing-10000-yen.png', ...P.terracotta,
     tags: ['積立投資', 'インデックス', '少額投資'],
     title: ['月1万円から', '始める積立投資'],
     subtitle: '続けることが、一番の戦略',
     features: ['自動積立', '複利効果', '長期投資'] },
 
-  { file: 'ideco-started.png', ...P.emerald,
+  { file: 'ideco-started.png', ...P.terracotta,
     tags: ['iDeCo', '老後資金', '節税'],
     title: ['iDeCoを始めた話'],
     subtitle: '老後に開けるお楽しみボックス',
     features: ['所得控除', '60歳受取', '公務員向け'] },
 
-  { file: 'ideco-performance-report.png', ...P.emerald,
+  { file: 'ideco-performance-report.png', ...P.terracotta,
     tags: ['iDeCo', '運用実績', '老後資金'],
     title: ['iDeCo運用実績を公開'],
     subtitle: '8年間で投資額が2倍以上になった話',
     features: ['累計+149万円', '利回り19.29%', '8年間の記録'] },
 
-  { file: 'investment-fund-creation.png', ...P.emerald,
+  { file: 'investment-fund-creation.png', ...P.terracotta,
     tags: ['家計見直し', '投資資金', '保険・通信費'],
     title: ['月6万円の投資資金を', '作った方法'],
     subtitle: '保険と通信費を見直すだけでいい',
     features: ['保険解約', '格安SIM乗換え', '年間80万円の原資'] },
 
-  { file: 'matsui-ideco-guide.png', ...P.emerald,
+  { file: 'matsui-ideco-guide.png', ...P.terracotta,
     tags: ['松井証券', 'iDeCo', '公務員'],
     title: ['松井証券iDeCoの特徴', '公務員におすすめの理由'],
     subtitle: '手数料0円・40種類・ポイント還元',
     features: ['運営管理費0円', '40種類の商品', 'ポイント還元'] },
 
-  // ── GREEN ────────────────────────────────────────────────────────────────
-  { file: 'how-much-capital-for-dividend-life.png', ...P.green,
+  // ── TERRACOTTA（旧 green） ────────────────────────────────────────────────
+  { file: 'how-much-capital-for-dividend-life.png', ...P.terracotta,
     tags: ['配当金生活', 'FIRE', '資産計算'],
     title: ['いくら種銭があれば', '配当金生活できる？'],
     subtitle: '具体的な計算で逆算する',
     features: ['利回り4%目安', '必要元本を計算', '配当再投資'] },
 
-  // ── TEAL ─────────────────────────────────────────────────────────────────
-  { file: 'what-is-sector-diversification-for-dividend-investing.png', ...P.teal,
+  // ── TERRACOTTA（旧 teal） ─────────────────────────────────────────────────
+  { file: 'what-is-sector-diversification-for-dividend-investing.png', ...P.terracotta,
     tags: ['セクター分散', '高配当株', 'リスク管理'],
     title: ['セクター分散とは？'],
     subtitle: '高配当株投資で失敗しないための考え方',
     features: ['業種分散', 'ディフェンシブ重視', 'リスク軽減'] },
 
-  { file: 'civil-servant-retirement-pension.png', ...P.teal,
+  { file: 'civil-servant-retirement-pension.png', ...P.terracotta,
     tags: ['公務員', '老後', '年金'],
     title: ['公務員は老後安泰？'],
     subtitle: '私が60歳で年金をもらうと決めた理由',
     features: ['年金の選択', '老後資金計算', '早期受取の判断'] },
 
-  // ── INDIGO ───────────────────────────────────────────────────────────────
-  { file: 'why-i-started-investing.png', ...P.indigo,
-    tags: ['公務員', '投資のきっかけ', '資産形成'],
-    title: ['なぜ公務員の私が', '投資を始めたか'],
-    subtitle: '安定の中にあった、静かな不安',
-    features: ['安定収入', '副収入の必要性', '不安の正体'] },
-
-  { file: 'mental-health-for-investing.png', ...P.indigo,
-    tags: ['投資メンタル', '長期投資', '心理管理'],
-    title: ['投資を続ける', 'メンタルの保ち方'],
-    subtitle: '暴落に揺れない、自分なりの軸の作り方',
-    features: ['暴落対策', '継続力', '感情コントロール'] },
-
-  { file: 'value-based-spending-mindset.png', ...P.indigo,
-    tags: ['マネーマインド', '支出管理', '価値観'],
-    title: ['投資で変わった', 'お金の使い方'],
-    subtitle: '価値で選ぶ思考とは',
-    features: ['無駄遣いが減る', '価値基準の変化', '豊かさの再定義'] },
-
-  // ── INDIGO × EMERALD ─────────────────────────────────────────────────────
-  { file: 'ideco-vs-nisa-koumuin.png', ...P.indigoEmerald,
-    tags: ['iDeCo', 'NISA', '公務員'],
-    title: ['iDeCo vs NISA'],
-    subtitle: '公務員はどちらを先にやるべきか',
-    features: ['節税効果の比較', '公務員の正解', '順番の考え方'] },
-
-  // ── PURPLE ───────────────────────────────────────────────────────────────
-  { file: 'to-my-past-self-who-feared-investing.png', ...P.purple,
-    tags: ['投資入門', '投資の怖さ', 'マインド'],
-    title: ['投資が怖いと', '思っていた', 'あの頃の私へ'],
-    subtitle: null,
-    features: ['最初の一歩', '少額から始める', '継続が力'] },
-
-  { file: 'money-mindset-changed-investing.png', ...P.purple,
-    tags: ['マネーマインド', '物欲', '価値観の変化'],
-    title: ['投資で変わった', 'お金の使い方'],
-    subtitle: '物欲が消えた理由',
-    features: ['物欲の変化', '満足感の正体', '豊かな暮らし'] },
-
-  // ── FUCHSIA ──────────────────────────────────────────────────────────────
-  { file: 'family-investment-talk.png', ...P.fuchsia,
-    tags: ['家族', '家計管理', '投資コミュニケーション'],
-    title: ['家族に投資の話、', 'していますか？'],
-    subtitle: '信頼で回る家計の作り方',
-    features: ['夫婦で共有', '信頼関係', '家計の仕組み化'] },
-
-  // ── AMBER ────────────────────────────────────────────────────────────────
-  { file: 'growing-dividend-stocks-appeal.png', ...P.amber,
-    tags: ['増配株', '高配当株', '長期投資'],
-    title: ['増配株の魅力'],
-    subtitle: '高配当株は今の利回り、増配株は未来の利回り',
-    features: ['連続増配', '複利効果', '10年後の利回り'] },
-
-  { file: 'smbc-gold-nl-100man.png', ...P.amber,
-    tags: ['三井住友ゴールドNL', '100万円修行', 'クレカ'],
-    title: ['三井住友ゴールドNL', '100万円修行の記録'],
-    subtitle: '固定費集約で年会費永年無料を達成する方法',
-    features: ['固定費集約', '年会費0円', '10,000ポイント'] },
-
-  { file: 'smbc-gold-nl-10000points.png', ...P.amber,
-    tags: ['三井住友ゴールドNL', 'ポイント', 'クレカ活用'],
-    title: ['毎年10,000ポイント', '確実にもらう方法'],
-    subtitle: '三井住友ゴールドカードNL・公務員の場合',
-    features: ['100万円達成', '年会費永年無料', '固定費で自然達成'] },
-
-  // ── RED ──────────────────────────────────────────────────────────────────
-  { file: 'rakuten-card-diamond.png', ...P.red,
+  // ── TERRACOTTA（旧 red） ──────────────────────────────────────────────────
+  { file: 'rakuten-card-diamond.png', ...P.terracotta,
     tags: ['楽天カード', 'ポイント', 'クレカ活用'],
     title: ['楽天カードを', '使い続ける理由'],
     subtitle: '通算62万ポイント獲得・公務員の実体験',
     features: ['還元率1%', 'ダイヤモンド会員', 'ポイント活用'] },
 
-  { file: 'rakuten-bank-guide.png', ...P.red,
+  { file: 'rakuten-bank-guide.png', ...P.terracotta,
     tags: ['楽天銀行', '仕組み化', '資産形成'],
     title: ['楽天銀行を給与受取口座に', 'した理由'],
     subtitle: '投資と生活費が自動で回る仕組みの作り方',
     features: ['マネーブリッジ', '給与受取口座', 'ほったらかし投資'] },
 
-  // ── ORANGE BROWN ─────────────────────────────────────────────────────────
-  { file: 'insurance-review-guide.png', ...P.orangeBrown,
+  // ── GOLD（旧 indigo） ─────────────────────────────────────────────────────
+  { file: 'why-i-started-investing.png', ...P.gold,
+    tags: ['公務員', '投資のきっかけ', '資産形成'],
+    title: ['なぜ公務員の私が', '投資を始めたか'],
+    subtitle: '安定の中にあった、静かな不安',
+    features: ['安定収入', '副収入の必要性', '不安の正体'] },
+
+  { file: 'mental-health-for-investing.png', ...P.gold,
+    tags: ['投資メンタル', '長期投資', '心理管理'],
+    title: ['投資を続ける', 'メンタルの保ち方'],
+    subtitle: '暴落に揺れない、自分なりの軸の作り方',
+    features: ['暴落対策', '継続力', '感情コントロール'] },
+
+  { file: 'value-based-spending-mindset.png', ...P.gold,
+    tags: ['マネーマインド', '支出管理', '価値観'],
+    title: ['投資で変わった', 'お金の使い方'],
+    subtitle: '価値で選ぶ思考とは',
+    features: ['無駄遣いが減る', '価値基準の変化', '豊かさの再定義'] },
+
+  // ── GOLD（旧 indigoEmerald） ──────────────────────────────────────────────
+  { file: 'ideco-vs-nisa-koumuin.png', ...P.gold,
+    tags: ['iDeCo', 'NISA', '公務員'],
+    title: ['iDeCo vs NISA'],
+    subtitle: '公務員はどちらを先にやるべきか',
+    features: ['節税効果の比較', '公務員の正解', '順番の考え方'] },
+
+  // ── GOLD（旧 purple） ─────────────────────────────────────────────────────
+  { file: 'to-my-past-self-who-feared-investing.png', ...P.gold,
+    tags: ['投資入門', '投資の怖さ', 'マインド'],
+    title: ['投資が怖いと', '思っていた', 'あの頃の私へ'],
+    subtitle: null,
+    features: ['最初の一歩', '少額から始める', '継続が力'] },
+
+  { file: 'money-mindset-changed-investing.png', ...P.gold,
+    tags: ['マネーマインド', '物欲', '価値観の変化'],
+    title: ['投資で変わった', 'お金の使い方'],
+    subtitle: '物欲が消えた理由',
+    features: ['物欲の変化', '満足感の正体', '豊かな暮らし'] },
+
+  // ── SUNSET（旧 fuchsia） ─────────────────────────────────────────────────
+  { file: 'family-investment-talk.png', ...P.sunset,
+    tags: ['家族', '家計管理', '投資コミュニケーション'],
+    title: ['家族に投資の話、', 'していますか？'],
+    subtitle: '信頼で回る家計の作り方',
+    features: ['夫婦で共有', '信頼関係', '家計の仕組み化'] },
+
+  // ── SUNSET（旧 amber） ────────────────────────────────────────────────────
+  { file: 'growing-dividend-stocks-appeal.png', ...P.sunset,
+    tags: ['増配株', '高配当株', '長期投資'],
+    title: ['増配株の魅力'],
+    subtitle: '高配当株は今の利回り、増配株は未来の利回り',
+    features: ['連続増配', '複利効果', '10年後の利回り'] },
+
+  { file: 'smbc-gold-nl-100man.png', ...P.sunset,
+    tags: ['三井住友ゴールドNL', '100万円修行', 'クレカ'],
+    title: ['三井住友ゴールドNL', '100万円修行の記録'],
+    subtitle: '固定費集約で年会費永年無料を達成する方法',
+    features: ['固定費集約', '年会費0円', '10,000ポイント'] },
+
+  { file: 'smbc-gold-nl-10000points.png', ...P.sunset,
+    tags: ['三井住友ゴールドNL', 'ポイント', 'クレカ活用'],
+    title: ['毎年10,000ポイント', '確実にもらう方法'],
+    subtitle: '三井住友ゴールドカードNL・公務員の場合',
+    features: ['100万円達成', '年会費永年無料', '固定費で自然達成'] },
+
+  // ── SUNSET（旧 orangeBrown） ──────────────────────────────────────────────
+  { file: 'insurance-review-guide.png', ...P.sunset,
     tags: ['保険見直し', '貯蓄型保険', '投資資金'],
     title: ['貯蓄型保険を解約した話'],
     subtitle: '担当者に言われた3つの呪縛を乗り越えるまで',
     features: ['解約の手順', '3つの呪縛を解く', '月5万円が浮いた'] },
 
-  // ── SLATE ────────────────────────────────────────────────────────────────
-  { file: 'no-panic-sell-corona-shock.png', ...P.slate,
+  // ── CREAM（旧 slate） ─────────────────────────────────────────────────────
+  { file: 'no-panic-sell-corona-shock.png', ...P.cream,
     tags: ['コロナショック', '暴落対応', 'メンタル'],
     title: ['コロナショックで', '狼狽売りしなかった', '理由'],
     subtitle: null,
     features: ['暴落耐性', '長期視点', '配当継続'] },
 
-  // ── TEAL（銘柄分析：NTT決算チェックポイント）─────────────────────────────
-  { file: 'ntt-earnings-checklist.png', ...P.teal,
+  // ── CREAM（旧 teal：銘柄分析） ────────────────────────────────────────────
+  { file: 'ntt-earnings-checklist.png', ...P.cream,
     tags: ['銘柄分析', 'NTT', '決算'],
     title: ['【銘柄分析】NTT', '決算で何を見るべき？', '初心者向けチェックポイント'],
     subtitle: null,
     features: ['利益の伸び', '事業の中身', '配当の継続性', '財務リスク'] },
 
-  // ── SITE TOP PAGE OGP ────────────────────────────────────────────────────
-  { file: 'og-site.png', ...P.blue,
+  // ── TERRACOTTA（サイト OGP） ──────────────────────────────────────────────
+  { file: 'og-site.png', ...P.terracotta,
     tags: ['公務員投資家', '高配当株', '資産形成'],
     title: ['配当日和'],
     subtitle: 'お金も私も働く、公務員の小さな自由計画',
